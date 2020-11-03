@@ -13,6 +13,8 @@ public class PlayerControls : MonoBehaviour
     public float gravityScale = 1.5f;
     float moveDirection = 0;
     bool isGrounded = false;
+
+    bool gravityInverted = false;
     Rigidbody2D r2d;
     Collider2D mainCollider;
     Transform t;
@@ -46,7 +48,21 @@ public class PlayerControls : MonoBehaviour
         // Jumping
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            if (gravityInverted){
+                r2d.velocity = new Vector2(r2d.velocity.x, -jumpHeight);
+            }
+            else {
+                r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            }
+
+            
+        }
+
+        if (Input.GetKeyDown("f"))
+        {
+             GetComponent<Rigidbody2D>().gravityScale *= -1;
+             transform.Rotate(Vector3.forward * 180);
+             gravityInverted= !gravityInverted;
         }
     }
 
