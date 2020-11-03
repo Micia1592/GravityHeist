@@ -16,7 +16,8 @@ public class Respawn : MonoBehaviour
        
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            string currentScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentScene);
         }
         //if (collision.tag == "Player")
         //{
