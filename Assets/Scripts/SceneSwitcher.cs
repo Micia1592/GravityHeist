@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int sceneNumber;
+    void Awake()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        sceneNumber = 0;
+    }
+    public void SceneChange()
+    {
+        SceneManager.LoadScene(sceneNumber);
+        Debug.Log("Scene Change" + sceneNumber);
     }
 }
