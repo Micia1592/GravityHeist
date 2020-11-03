@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f774cd73da4e7e340acc95d3213f4eff
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scripts/Scenes/OllieTesting.unity
     guid: 5a1fb13d3d0f3f84a9ed236ed8811745
+  - enabled: 1
+    path: Assets/Scenes/OllieTesting.unity
+    guid: f271b9a08f1e6f742b5d7e8f0958e73f
   m_configObjects: {}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn : MonoBehaviour
 {
@@ -12,15 +13,20 @@ public class Respawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if (collision.tag == "Player")
         {
-            collision.transform.position = spawn.transform.position;
+            SceneManager.LoadScene(1);
         }
-       
-        if (collision.tag == "GravityItem")
-        {
-            collision.transform.position = BoxSpawn.transform.position;
-        }
+        //if (collision.tag == "Player")
+        //{
+        //    collision.transform.position = spawn.transform.position;
+        //}
+
+        //if (collision.tag == "GravityItem")
+        //{
+        //    collision.transform.position = BoxSpawn.transform.position;
+        //}
     }
 
     void Start()
