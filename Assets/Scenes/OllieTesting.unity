@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4205c544f1d21c04383b63ec2bd4ae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneNumber: 0
 --- !u!4 &345832959
 Transform:
   m_ObjectHideFlags: 0
@@ -1444,12 +1445,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649851752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4423a2dc036ed84cad17c7b42376943, type: 3}
+  m_Script: {fileID: 11500000, guid: 7961f4963950a8649b49ab5853f852b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 320613709}
-  spawn: {fileID: 879894728}
-  BoxSpawn: {fileID: 0}
+  SceneSwitcher: {fileID: 345832957}
 --- !u!50 &1649851754
 Rigidbody2D:
   serializedVersion: 4
@@ -1552,7 +1551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649851752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.34, y: -2.92, z: -67.32353}
+  m_LocalPosition: {x: -8.46, y: -2.54, z: -67.32353}
   m_LocalScale: {x: 2.148901, y: 1.8005321, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
