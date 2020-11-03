@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     public int sceneNumber;
-
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     private void Start()
     {
         sceneNumber = 0;
