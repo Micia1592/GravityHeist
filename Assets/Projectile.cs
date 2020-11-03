@@ -27,6 +27,17 @@ public class Projectile : MonoBehaviour
 
             Destroy(gameObject);
         }
+        else if(collision.tag == "Solid")
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Switch")
+        {
+            collision.gameObject.GetComponent<GravityEffected>().reverseGravity();
+            Destroy(gameObject);
+        }
+
+
     }
 
     // Update is called once per frame

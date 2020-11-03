@@ -9,7 +9,6 @@ public class PlayerControls : MonoBehaviour
 {
     // Move player in 2D space
     public float maxSpeed = 3.4f;
-    public float moveForce = 365f;
     public float jumpHeight = 6.5f;
     public float gravityScale = 1.5f;
     float moveDirection = 0;
@@ -94,7 +93,7 @@ public class PlayerControls : MonoBehaviour
         // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
         if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
             // ... add a force to the player.
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * moveForce);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h);
 
         // If the player's horizontal velocity is greater than the maxSpeed...
         if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)

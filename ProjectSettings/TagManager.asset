@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GravityItem
   - Switch
+  - Solid
   layers:
   - Default
   - TransparentFX
