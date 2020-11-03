@@ -1428,13 +1428,14 @@ GameObject:
   - component: {fileID: 1649851755}
   - component: {fileID: 1649851754}
   - component: {fileID: 1649851753}
+  - component: {fileID: 1649851759}
   m_Layer: 0
   m_Name: EndZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1649851753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,7 +1443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649851752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4423a2dc036ed84cad17c7b42376943, type: 3}
   m_Name: 
@@ -1558,6 +1559,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649851759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649851752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7961f4963950a8649b49ab5853f852b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneSwitcher: {fileID: 345832957}
 --- !u!1 &1884353310
 GameObject:
   m_ObjectHideFlags: 0
