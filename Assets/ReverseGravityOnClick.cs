@@ -13,5 +13,7 @@ public class ReverseGravityOnClick : MonoBehaviour
             gravityInverted= !gravityInverted;
         }
     }
+
+    
   
 }
