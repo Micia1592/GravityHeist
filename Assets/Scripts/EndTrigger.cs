@@ -9,8 +9,8 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneSwitcher.GetComponent<SceneSwitcher>().sceneNumber += 1;
-        SceneSwitcher.GetComponent<SceneSwitcher>().SceneChange();
+
+        SceneSwitcher.GetComponent<SceneSwitcher>().SceneChange(); //Trigger scene change
        
     }
 }
