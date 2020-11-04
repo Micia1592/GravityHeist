@@ -40,6 +40,14 @@ public class GravityObject : MonoBehaviour
         }
     }
 
+    //Return whether or not (as a result of both global and local gravity) the current object is under normal gravity
+    //Currently only used for determining whether or not to flip a transform
+    public bool GetGravityState(){
+
+        return !((!globalGravityState&&!localGravityState)||(globalGravityState&&localGravityState));
+
+    }
+
    
 
 }
