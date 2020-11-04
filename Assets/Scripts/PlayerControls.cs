@@ -48,7 +48,7 @@ public class PlayerControls : MonoBehaviour
             //Debug.Log("Player is grounded");
         }
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || r2d.velocity.x > 0.01f))
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && isGrounded)
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
         }
