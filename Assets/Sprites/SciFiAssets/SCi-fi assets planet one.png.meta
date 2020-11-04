@@ -1,0 +1,1322 @@
+fileFormatVersion: 2
+guid: e3084277de5b3aa4da62272948fda836
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7295907119583491395
+    second: SCi-fi assets planet one_0
+  - first:
+      213: 5007522362675628726
+    second: SCi-fi assets planet one_1
+  - first:
+      213: -6919191849760844859
+    second: SCi-fi assets planet one_2
+  - first:
+      213: -15405949780769232
+    second: SCi-fi assets planet one_3
+  - first:
+      213: 1962619151208213047
+    second: SCi-fi assets planet one_4
+  - first:
+      213: 3132101349384097061
+    second: SCi-fi assets planet one_5
+  - first:
+      213: -5622144650110440386
+    second: SCi-fi assets planet one_6
+  - first:
+      213: 3001593016227489863
+    second: SCi-fi assets planet one_7
+  - first:
+      213: -1710258775069586372
+    second: SCi-fi assets planet one_8
+  - first:
+      213: 5518919186810599906
+    second: SCi-fi assets planet one_9
+  - first:
+      213: -142818920152311982
+    second: SCi-fi assets planet one_10
+  - first:
+      213: 5313081423138726597
+    second: SCi-fi assets planet one_11
+  - first:
+      213: 567140806086024760
+    second: SCi-fi assets planet one_12
+  - first:
+      213: 7546867155361865084
+    second: SCi-fi assets planet one_13
+  - first:
+      213: -7397942257655301504
+    second: SCi-fi assets planet one_14
+  - first:
+      213: -4625091822369634542
+    second: SCi-fi assets planet one_15
+  - first:
+      213: -5096185059061018649
+    second: SCi-fi assets planet one_16
+  - first:
+      213: -1940216925784254206
+    second: SCi-fi assets planet one_17
+  - first:
+      213: 5401539249972270034
+    second: SCi-fi assets planet one_18
+  - first:
+      213: 5865674023002252908
+    second: SCi-fi assets planet one_19
+  - first:
+      213: 8180488584467201164
+    second: SCi-fi assets planet one_20
+  - first:
+      213: -1313634393941369853
+    second: SCi-fi assets planet one_21
+  - first:
+      213: 5527207695879969882
+    second: SCi-fi assets planet one_22
+  - first:
+      213: 8382307826310810546
+    second: SCi-fi assets planet one_23
+  - first:
+      213: 892050785666731592
+    second: SCi-fi assets planet one_24
+  - first:
+      213: -2955922193302479251
+    second: SCi-fi assets planet one_25
+  - first:
+      213: -4470552291741711265
+    second: SCi-fi assets planet one_26
+  - first:
+      213: -5955629947420849258
+    second: SCi-fi assets planet one_27
+  - first:
+      213: 1942638656518531318
+    second: SCi-fi assets planet one_28
+  - first:
+      213: -8005691701671025494
+    second: SCi-fi assets planet one_29
+  - first:
+      213: -3596353076182685708
+    second: SCi-fi assets planet one_30
+  - first:
+      213: -1439306588374728319
+    second: SCi-fi assets planet one_31
+  - first:
+      213: 1595361412465798827
+    second: SCi-fi assets planet one_32
+  - first:
+      213: -6048726821436761625
+    second: SCi-fi assets planet one_33
+  - first:
+      213: 8289448930874661560
+    second: SCi-fi assets planet one_34
+  - first:
+      213: -2503420628231897310
+    second: SCi-fi assets planet one_35
+  - first:
+      213: -3658810893966139957
+    second: SCi-fi assets planet one_36
+  - first:
+      213: -5836836695425651312
+    second: SCi-fi assets planet one_37
+  - first:
+      213: -45353967671198886
+    second: SCi-fi assets planet one_38
+  - first:
+      213: -622450226359721896
+    second: SCi-fi assets planet one_39
+  - first:
+      213: -2674124903109451529
+    second: SCi-fi assets planet one_40
+  - first:
+      213: 1609351796464800
+    second: SCi-fi assets planet one_41
+  - first:
+      213: 4557946041662596119
+    second: SCi-fi assets planet one_42
+  - first:
+      213: 4923196270665973216
+    second: SCi-fi assets planet one_43
+  - first:
+      213: 729798030377639990
+    second: SCi-fi assets planet one_44
+  - first:
+      213: 7252669715433479304
+    second: SCi-fi assets planet one_45
+  - first:
+      213: 8530197448524868396
+    second: SCi-fi assets planet one_46
+  - first:
+      213: -1886638305239336969
+    second: SCi-fi assets planet one_47
+  - first:
+      213: -8702067336370443211
+    second: SCi-fi assets planet one_48
+  - first:
+      213: -9018934647505682892
+    second: SCi-fi assets planet one_49
+  - first:
+      213: -6188471436893090556
+    second: SCi-fi assets planet one_50
+  - first:
+      213: -467808877130150665
+    second: SCi-fi assets planet one_51
+  - first:
+      213: 4818845567729074662
+    second: SCi-fi assets planet one_52
+  - first:
+      213: -6318969793565818682
+    second: SCi-fi assets planet one_53
+  - first:
+      213: -7363530235181257248
+    second: SCi-fi assets planet one_54
+  - first:
+      213: -357504414445623995
+    second: SCi-fi assets planet one_55
+  - first:
+      213: 7416159257748614139
+    second: SCi-fi assets planet one_56
+  - first:
+      213: -2571745864976610391
+    second: SCi-fi assets planet one_57
+  - first:
+      213: 2156991971595264444
+    second: SCi-fi assets planet one_58
+  - first:
+      213: -4346165071185303519
+    second: SCi-fi assets planet one_59
+  - first:
+      213: 6182917908423829374
+    second: SCi-fi assets planet one_60
+  - first:
+      213: 3077605255202303359
+    second: SCi-fi assets planet one_61
+  - first:
+      213: -343659074297142649
+    second: SCi-fi assets planet one_62
+  - first:
+      213: -5073890190780880357
+    second: SCi-fi assets planet one_63
+  - first:
+      213: 6331369146768307302
+    second: SCi-fi assets planet one_64
+  - first:
+      213: 845704455360336365
+    second: SCi-fi assets planet one_65
+  - first:
+      213: 9095024903222160306
+    second: SCi-fi assets planet one_66
+  - first:
+      213: 3923778608098301536
+    second: SCi-fi assets planet one_67
+  - first:
+      213: -5469710112716531107
+    second: SCi-fi assets planet one_68
+  - first:
+      213: 7994118858369307159
+    second: SCi-fi assets planet one_69
+  - first:
+      213: 2044827499411835492
+    second: SCi-fi assets planet one_70
+  - first:
+      213: 3211540695953806149
+    second: SCi-fi assets planet one_71
+  - first:
+      213: -3725233489285166826
+    second: SCi-fi assets planet one_72
+  - first:
+      213: -5464267563726885422
+    second: SCi-fi assets planet one_73
+  - first:
+      213: -5841762425336103084
+    second: SCi-fi assets planet one_74
+  - first:
+      213: -4708476169100252621
+    second: SCi-fi assets planet one_75
+  - first:
+      213: 5958889534375110042
+    second: SCi-fi assets planet one_76
+  - first:
+      213: 273091477468891156
+    second: SCi-fi assets planet one_77
+  - first:
+      213: 5403285781626384377
+    second: SCi-fi assets planet one_78
+  - first:
+      213: 2365524581258880776
+    second: SCi-fi assets planet one_79
+  - first:
+      213: -1848602602404526725
+    second: SCi-fi assets planet one_80
+  - first:
+      213: -6623204706732049952
+    second: SCi-fi assets planet one_81
+  - first:
+      213: 8219745487459451857
+    second: SCi-fi assets planet one_82
+  - first:
+      213: 4277173842375098039
+    second: SCi-fi assets planet one_83
+  - first:
+      213: -5161627604662663395
+    second: SCi-fi assets planet one_84
+  - first:
+      213: -7551046501569859091
+    second: SCi-fi assets planet one_85
+  - first:
+      213: -8045373505215045022
+    second: SCi-fi assets planet one_86
+  - first:
+      213: -4443668781341376300
+    second: SCi-fi assets planet one_87
+  - first:
+      213: 5505467882795199602
+    second: SCi-fi assets planet one_88
+  - first:
+      213: -2057953997305795510
+    second: SCi-fi assets planet one_89
+  - first:
+      213: -8387580111488698891
+    second: SCi-fi assets planet one_90
+  - first:
+      213: -5964133948645204137
+    second: SCi-fi assets planet one_91
+  - first:
+      213: 1168604574706662292
+    second: SCi-fi assets planet one_92
+  - first:
+      213: 281480075986510556
+    second: SCi-fi assets planet one_93
+  - first:
+      213: 3026367057089620708
+    second: SCi-fi assets planet one_94
+  - first:
+      213: -2133442180623851298
+    second: SCi-fi assets planet one_95
+  - first:
+      213: 7201372404918207263
+    second: SCi-fi assets planet one_96
+  - first:
+      213: 2257003879479717268
+    second: SCi-fi assets planet one_97
+  - first:
+      213: 946513791906594033
+    second: SCi-fi assets planet one_98
+  - first:
+      213: 3675533699825219699
+    second: SCi-fi assets planet one_99
+  - first:
+      213: -5947552089654292795
+    second: SCi-fi assets planet one_100
+  - first:
+      213: 4455882501652898284
+    second: SCi-fi assets planet one_101
+  - first:
+      213: -4905784936296559193
+    second: SCi-fi assets planet one_102
+  - first:
+      213: -8991840101243565699
+    second: SCi-fi assets planet one_103
+  - first:
+      213: -3132865880712752865
+    second: SCi-fi assets planet one_104
+  - first:
+      213: -3550322755560092559
+    second: SCi-fi assets planet one_105
+  - first:
+      213: -3859887047442740453
+    second: SCi-fi assets planet one_106
+  - first:
+      213: 3460889554291516328
+    second: SCi-fi assets planet one_107
+  - first:
+      213: 5112448607446065493
+    second: SCi-fi assets planet one_108
+  - first:
+      213: 708650883162851900
+    second: SCi-fi assets planet one_109
+  - first:
+      213: 5262914362252229161
+    second: SCi-fi assets planet one_110
+  - first:
+      213: -943740778624226491
+    second: SCi-fi assets planet one_111
+  - first:
+      213: 3990122064749490315
+    second: SCi-fi assets planet one_112
+  - first:
+      213: -4317129862471877679
+    second: SCi-fi assets planet one_113
+  - first:
+      213: 2919573821731082918
+    second: SCi-fi assets planet one_114
+  - first:
+      213: -8042773750503905622
+    second: SCi-fi assets planet one_115
+  - first:
+      213: 4168482725482545589
+    second: SCi-fi assets planet one_116
+  - first:
+      213: -1228949013852857631
+    second: SCi-fi assets planet one_117
+  - first:
+      213: 1593655632982480651
+    second: SCi-fi assets planet one_118
+  - first:
+      213: 1830033578551782005
+    second: SCi-fi assets planet one_119
+  - first:
+      213: 7156137794474315512
+    second: SCi-fi assets planet one_120
+  - first:
+      213: -2891486600941053961
+    second: SCi-fi assets planet one_121
+  - first:
+      213: -7079076280067082538
+    second: SCi-fi assets planet one_122
+  - first:
+      213: 8739719528666312372
+    second: SCi-fi assets planet one_123
+  - first:
+      213: 3509969455435905890
+    second: SCi-fi assets planet one_124
+  - first:
+      213: -4783705371627229998
+    second: SCi-fi assets planet one_125
+  - first:
+      213: -892867252554086565
+    second: SCi-fi assets planet one_126
+  - first:
+      213: 4915823195507882002
+    second: SCi-fi assets planet one_127
+  - first:
+      213: -6175616103375839639
+    second: SCi-fi assets planet one_128
+  - first:
+      213: -7958812804881479338
+    second: SCi-fi assets planet one_129
+  - first:
+      213: 5885045201652827346
+    second: SCi-fi assets planet one_130
+  - first:
+      213: -3391454085173991190
+    second: SCi-fi assets planet one_131
+  - first:
+      213: -1546032905522716501
+    second: SCi-fi assets planet one_132
+  - first:
+      213: 2525809731422350132
+    second: SCi-fi assets planet one_133
+  - first:
+      213: -6021739913362245793
+    second: SCi-fi assets planet one_134
+  - first:
+      213: -7107225471165874207
+    second: SCi-fi assets planet one_135
+  - first:
+      213: 6653835912184414336
+    second: SCi-fi assets planet one_136
+  - first:
+      213: -3983192473720429865
+    second: SCi-fi assets planet one_137
+  - first:
+      213: 6252925391553478976
+    second: SCi-fi assets planet one_138
+  - first:
+      213: 7180526087149056647
+    second: SCi-fi assets planet one_139
+  - first:
+      213: -784558075723177287
+    second: SCi-fi assets planet one_140
+  - first:
+      213: 7283446021552940874
+    second: SCi-fi assets planet one_141
+  - first:
+      213: -7923053277486454394
+    second: SCi-fi assets planet one_142
+  - first:
+      213: -7050225706781806379
+    second: SCi-fi assets planet one_143
+  - first:
+      213: 1391791453781394743
+    second: SCi-fi assets planet one_144
+  - first:
+      213: 1102628260881951629
+    second: SCi-fi assets planet one_145
+  - first:
+      213: -5551355063095037211
+    second: SCi-fi assets planet one_146
+  - first:
+      213: -4266833063994584488
+    second: SCi-fi assets planet one_147
+  - first:
+      213: 5828500941019468123
+    second: SCi-fi assets planet one_148
+  - first:
+      213: -5394610045465534541
+    second: SCi-fi assets planet one_149
+  - first:
+      213: -2576170474572519830
+    second: SCi-fi assets planet one_150
+  - first:
+      213: -2493486277602996491
+    second: SCi-fi assets planet one_151
+  - first:
+      213: 6167909571981792196
+    second: SCi-fi assets planet one_152
+  - first:
+      213: -5154004191206246068
+    second: SCi-fi assets planet one_153
+  - first:
+      213: 1152425234290762325
+    second: SCi-fi assets planet one_154
+  - first:
+      213: 728770647779924868
+    second: SCi-fi assets planet one_155
+  - first:
+      213: -2729879881855053798
+    second: SCi-fi assets planet one_156
+  - first:
+      213: -9011844082268193720
+    second: SCi-fi assets planet one_157
+  - first:
+      213: -2939663160785318690
+    second: SCi-fi assets planet one_158
+  - first:
+      213: 2395500260567058685
+    second: SCi-fi assets planet one_159
+  - first:
+      213: 5537288396194151380
+    second: SCi-fi assets planet one_160
+  - first:
+      213: 5591708250923232300
+    second: SCi-fi assets planet one_161
+  - first:
+      213: 7090868775530437385
+    second: SCi-fi assets planet one_162
+  - first:
+      213: -2325309828230866418
+    second: SCi-fi assets planet one_163
+  - first:
+      213: 272983519542088729
+    second: SCi-fi assets planet one_164
+  - first:
+      213: 8523654394196784835
+    second: SCi-fi assets planet one_165
+  - first:
+      213: -3005217908127428025
+    second: SCi-fi assets planet one_166
+  - first:
+      213: 4055238831239724547
+    second: SCi-fi assets planet one_167
+  - first:
+      213: 5839745419855854533
+    second: SCi-fi assets planet one_168
+  - first:
+      213: 7370018300219255758
+    second: SCi-fi assets planet one_169
+  - first:
+      213: 8943528753012226536
+    second: SCi-fi assets planet one_170
+  - first:
+      213: 7623462906738421872
+    second: SCi-fi assets planet one_171
+  - first:
+      213: -5997360888516693329
+    second: SCi-fi assets planet one_172
+  - first:
+      213: -1839879132442047846
+    second: SCi-fi assets planet one_173
+  - first:
+      213: 1113129476079358021
+    second: SCi-fi assets planet one_174
+  - first:
+      213: 6644954905898091593
+    second: SCi-fi assets planet one_175
+  - first:
+      213: 4925428898853818322
+    second: SCi-fi assets planet one_176
+  - first:
+      213: -8048908892090666840
+    second: SCi-fi assets planet one_177
+  - first:
+      213: 9031841959500808806
+    second: SCi-fi assets planet one_178
+  - first:
+      213: -5547603158482862682
+    second: SCi-fi assets planet one_179
+  - first:
+      213: -7152663785435323389
+    second: SCi-fi assets planet one_180
+  - first:
+      213: -8195452674019445563
+    second: SCi-fi assets planet one_181
+  - first:
+      213: 1891896843595547570
+    second: SCi-fi assets planet one_182
+  - first:
+      213: 6595249768461341607
+    second: SCi-fi assets planet one_183
+  - first:
+      213: 8432568162483861972
+    second: SCi-fi assets planet one_184
+  - first:
+      213: -2249046923219069439
+    second: SCi-fi assets planet one_185
+  - first:
+      213: 4039758069437149450
+    second: SCi-fi assets planet one_186
+  - first:
+      213: 3204982206704105243
+    second: SCi-fi assets planet one_187
+  - first:
+      213: 6633087532100471370
+    second: SCi-fi assets planet one_188
+  - first:
+      213: 1540414558762471881
+    second: SCi-fi assets planet one_189
+  - first:
+      213: 1461858942839457123
+    second: SCi-fi assets planet one_190
+  - first:
+      213: 4335236525953206537
+    second: SCi-fi assets planet one_191
+  - first:
+      213: -8203986084158902035
+    second: SCi-fi assets planet one_192
+  - first:
+      213: 615684869707125143
+    second: SCi-fi assets planet one_193
+  - first:
+      213: -2464006758731124003
+    second: SCi-fi assets planet one_0
+  - first:
+      213: 2298559100799866817
+    second: SCi-fi assets planet one_1
+  - first:
+      213: 6923271499780834605
+    second: SCi-fi assets planet one_2
+  - first:
+      213: -2205194054519971649
+    second: SCi-fi assets planet one_3
+  - first:
+      213: 8339094994321701041
+    second: SCi-fi assets planet one_4
+  - first:
+      213: -352309801781445133
+    second: SCi-fi assets planet one_5
+  - first:
+      213: 8809078637227437776
+    second: SCi-fi assets planet one_6
+  - first:
+      213: -2589543344340318381
+    second: SCi-fi assets planet one_7
+  - first:
+      213: 3024236074747601519
+    second: SCi-fi assets planet one_8
+  - first:
+      213: -2079269963986513947
+    second: SCi-fi assets planet one_9
+  - first:
+      213: -3016649034610992399
+    second: SCi-fi assets planet one_10
+  - first:
+      213: 4541192004455119775
+    second: SCi-fi assets planet one_11
+  - first:
+      213: 1319186402378794435
+    second: SCi-fi assets planet one_12
+  - first:
+      213: -7486236507060304640
+    second: SCi-fi assets planet one_13
+  - first:
+      213: 3686702014914500058
+    second: SCi-fi assets planet one_14
+  - first:
+      213: 1902131093734642407
+    second: SCi-fi assets planet one_15
+  - first:
+      213: -5398554608728842789
+    second: SCi-fi assets planet one_16
+  - first:
+      213: -6686590852004204814
+    second: SCi-fi assets planet one_17
+  - first:
+      213: 6355643337822389477
+    second: SCi-fi assets planet one_18
+  - first:
+      213: 1447198553609861362
+    second: SCi-fi assets planet one_19
+  - first:
+      213: -3405214766359384442
+    second: SCi-fi assets planet one_20
+  - first:
+      213: 4681530379648121829
+    second: SCi-fi assets planet one_21
+  - first:
+      213: -4104277750328797368
+    second: SCi-fi assets planet one_22
+  - first:
+      213: 9213726649207992552
+    second: SCi-fi assets planet one_23
+  - first:
+      213: 995453443460469593
+    second: SCi-fi assets planet one_24
+  - first:
+      213: 4087593482784929417
+    second: SCi-fi assets planet one_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 256
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd27ba568e61ecdd0800000000000000
+      internalID: -2464006758731124003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7da6ae25f16ef10800000000000000
+      internalID: 2298559100799866817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 112
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25c50c7fb6641060800000000000000
+      internalID: 6923271499780834605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0a887e0b39561e0800000000000000
+      internalID: -2205194054519971649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 118
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b878c407ba6ab370800000000000000
+      internalID: 8339094994321701041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 80
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdbde51a185c1bf0800000000000000
+      internalID: -352309801781445133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 80
+        width: 45
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de6c6a1952204a70800000000000000
+      internalID: 8809078637227437776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 84
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3574e1e5c08101cd0800000000000000
+      internalID: -2589543344340318381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 48
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62a048dfae38f920800000000000000
+      internalID: 3024236074747601519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 35
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efc174fbf2f423e0800000000000000
+      internalID: -2079269963986513947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 48
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa9cf79fa5b226d0800000000000000
+      internalID: -3016649034610992399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_11
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 50
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b346a511e850f30800000000000000
+      internalID: 4541192004455119775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_12
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 48
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5405a2b01be4210800000000000000
+      internalID: 1319186402378794435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_13
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 35
+        width: 66
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0050c148f8b8b1890800000000000000
+      internalID: -7486236507060304640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad512b713fbc92330800000000000000
+      internalID: 3686702014914500058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2574ed62ab56a10800000000000000
+      internalID: 1902131093734642407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 32
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd5b26af2b7415b0800000000000000
+      internalID: -5398554608728842789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_17
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 32
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fea9e31c057433a0800000000000000
+      internalID: -6686590852004204814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 32
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e44bfd21f7c33850800000000000000
+      internalID: 6355643337822389477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 16
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8ff5bba6b751410800000000000000
+      internalID: 1447198553609861362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_20
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 32
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eeb3b263f3eb0d0800000000000000
+      internalID: -3405214766359384442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 41
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb3024931328f040800000000000000
+      internalID: 4681530379648121829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_22
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 6
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847dc18a12daa07c0800000000000000
+      internalID: -4104277750328797368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 53
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0b79f229bbddf70800000000000000
+      internalID: 9213726649207992552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_24
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 9
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95396e7f1af80dd00800000000000000
+      internalID: 995453443460469593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SCi-fi assets planet one_25
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 4
+        width: 66
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986f8979d9c0ab830800000000000000
+      internalID: 4087593482784929417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
