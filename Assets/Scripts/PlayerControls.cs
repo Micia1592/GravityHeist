@@ -11,6 +11,9 @@ public class PlayerControls : MonoBehaviour
     public float maxSpeed = 3.4f;
     public float jumpHeight = 6.5f;
     public float gravityScale = 1.5f;
+
+    public LayerMask groundCheckLayer;
+    public float groundCheckRange = 0.1f;
     float moveDirection = 0;
     bool isGrounded = false;
     Rigidbody2D r2d;
@@ -40,6 +43,10 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debugging the grounded check
+        if (isGrounded){
+            //Debug.Log("Player is grounded");
+        }
         // Movement controls
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || r2d.velocity.x > 0.01f))
         {
@@ -78,18 +85,13 @@ public class PlayerControls : MonoBehaviour
         if (gravityObject.GetGravityState()!=currGravityState){
             transform.Rotate(Vector3.forward * 180);
             currGravityState = gravityObject.GetGravityState();
+            //Flip();
         }
 
-        Bounds colliderBounds = mainCollider.bounds;
-        Vector3 groundCheckPos = colliderBounds.min + new Vector3(colliderBounds.size.x * 0.5f, 0.1f, 0);
-        // Check if player is grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheckPos, 0.23f);
+        IsGrounded();
 
         // Apply movement velocity
         r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
-
-        // Simple debug
-        Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, 0.23f, 0), isGrounded ? Color.green : Color.red);
 
         // Cache the horizontal input.
         float h = Input.GetAxis("Horizontal");
@@ -117,7 +119,6 @@ public class PlayerControls : MonoBehaviour
             // ... flip the player.
             Flip();
 
-
     }
 
     void Flip()
@@ -129,5 +130,26 @@ public class PlayerControls : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private bool IsGrounded(){
+        bool localIsGrounded = false;
+        Bounds colliderBounds = mainCollider.bounds;
+        Vector2 feetPosition = new Vector2();
+        
+        //Set foot position to either top or bottom of character depending on gravity direction
+        if (!gravityObject.GetGravityState()){
+            feetPosition = new Vector2(colliderBounds.center.x, colliderBounds.min.y);
+        }
+        else{
+            feetPosition = new Vector2(colliderBounds.center.x, colliderBounds.max.y);
+        }
+        localIsGrounded = Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer);
+
+        isGrounded = localIsGrounded;
+        //Debug by drawing the line were casting to check the ground
+        //Debug.DrawLine(feetPosition, new Vector2(feetPosition.x, feetPosition.y - groundCheckRange), isGrounded ? Color.green : Color.red);
+        return isGrounded;
+        
     }
 }
