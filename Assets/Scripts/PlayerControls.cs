@@ -17,6 +17,8 @@ public class PlayerControls : MonoBehaviour
     bool gravityInverted = false;
     Rigidbody2D r2d;
     Collider2D mainCollider;
+
+    GravityObject gravityObject;
     Transform t;
 
     [HideInInspector]
@@ -33,6 +35,7 @@ public class PlayerControls : MonoBehaviour
         r2d.freezeRotation = true;
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
+        gravityObject = GetComponent<GravityObject>();
     }
 
     // Update is called once per frame
@@ -65,9 +68,7 @@ public class PlayerControls : MonoBehaviour
 
         if (Input.GetKeyDown("f"))
         {
-             GetComponent<Rigidbody2D>().gravityScale *= -1;
-             transform.Rotate(Vector3.forward * 180);
-             gravityInverted= !gravityInverted;
+             this.gravityObject.SwitchLocalGravity();
         }
     }
 
