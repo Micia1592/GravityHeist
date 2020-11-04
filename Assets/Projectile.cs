@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    private ReverseGrav reverseGrav;
+    private GravityObject gravObj;
     private bool gravityInverted = false;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
     {
         if(collision.tag == "GravityItem")
         {
-            collision.gameObject.GetComponent<GravityEffected>().reverseGravity();
+            collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
 
             //GetComponent<Rigidbody2D>().gravityScale *= -1;
             //transform.Rotate(Vector3.forward * 180);
@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         }
         else if (collision.tag == "Switch")
         {
-            collision.gameObject.GetComponent<GravityEffected>().reverseGravity();
+            collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
             Destroy(gameObject);
         }
 
