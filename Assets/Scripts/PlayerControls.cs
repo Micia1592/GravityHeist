@@ -12,6 +12,8 @@ public class PlayerControls : MonoBehaviour
     public float jumpHeight = 6.5f;
     public float gravityScale = 1.5f;
 
+    public float airControlStrength = 10F;
+
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
     float moveDirection = 0;
@@ -20,6 +22,8 @@ public class PlayerControls : MonoBehaviour
     Collider2D mainCollider;
 
     GravityObject gravityObject;
+
+    bool jumping = false;
     bool currGravityState= false;
     Transform t;
 
@@ -42,37 +46,23 @@ public class PlayerControls : MonoBehaviour
         respawnPoint = transform.position;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        //Debugging the grounded check
-        if (isGrounded){
-            //Debug.Log("Player is grounded");
-        }
         // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && isGrounded)
+        //Current intention is that Update() captures all of the player intended inputs, FixedUpdate() then interprets them
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
         }
         else
         {
-            if (isGrounded || r2d.velocity.magnitude < 0.01f)
-            {
-                moveDirection = 0;
-            }   
+            moveDirection = 0;
         }
         // Jumping
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            //Jump goes negative if gravity on player is reversed
-            if (gravityObject.GetGravityState()){
-                r2d.velocity = new Vector2(r2d.velocity.x, -jumpHeight);
-            }
-            else {
-                r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
-            }
-
-            
+            jumping = true;
         }
 
         if (Input.GetKeyDown("f"))
@@ -83,44 +73,60 @@ public class PlayerControls : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Check current gravity on player to see if its changed. Flip their transform if it has
-        if (gravityObject.GetGravityState()!=currGravityState){
-            transform.Rotate(Vector3.forward * 180);
-            currGravityState = gravityObject.GetGravityState();
-            //Flip();
+        // Apply movement velocity
+        //Apply full speed in desired direction if grounded
+        if (IsGrounded()){
+            r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
+        }
+        //Else if we arent grounded, add force in the desired direction
+        else{
+            r2d.AddForce(new Vector2(airControlStrength*moveDirection, 0));
+        }
+        //Limit horizontal speed to max speed
+        if(Mathf.Abs(r2d.velocity.x)>maxSpeed){
+            r2d.velocity = new Vector2((maxSpeed*Mathf.Sign(r2d.velocity.x)), r2d.velocity.y);
         }
 
-        IsGrounded();
+        
+        //Add jump force if needed
+        if (jumping){
+            //Jump goes negative if gravity on player is reversed
+            if (gravityObject.GetGravityState()){
+                r2d.velocity = new Vector2(r2d.velocity.x, -jumpHeight);
+            }
+            else {
+                r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            }
+            jumping = false;
+        }
 
-        // Apply movement velocity
-        r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
+        UpdateOrientation();
+    }
 
-        // Cache the horizontal input.
-        float h = Input.GetAxis("Horizontal");
-
-        // The Speed animator parameter is set to the absolute value of the horizontal input.
-        //anim.SetFloat("Speed", Mathf.Abs(h));
-
-        // If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-        if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
-            // ... add a force to the player.
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * h);
-
-        // If the player's horizontal velocity is greater than the maxSpeed...
-        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
-            // ... set the player's velocity to the maxSpeed in the x axis.
-            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-
-        // If the input is moving the player right and the player is facing left...
-        if (h > 0 && !facingRight)
-            // ... flip the player.
-            Flip();
-        // Otherwise if the input is moving the player left and the player is facing right...
-        else if (h < 0 && facingRight)
-            // ... flip the player.
-            Flip();
-
+    void UpdateOrientation(){
+        //Rotate if players gravity has switched and pdate local gravity state
+        if (currGravityState!=gravityObject.GetGravityState()){
+            transform.Rotate(Vector3.forward * 180);
+            currGravityState = gravityObject.GetGravityState();
+        }
+        //Facing under normal gravity
+        if(!currGravityState){
+            // If the input is moving the player right and the player is facing left...
+            if (Mathf.Sign(r2d.velocity.x) > 0 && !facingRight)
+                Flip();
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (Mathf.Sign(r2d.velocity.x) < 0 && facingRight)
+                Flip();
+        }
+        //Facing under inverted gravity
+        else{
+            // If the input is moving the player right and the player is facing left...
+            if (Mathf.Sign(r2d.velocity.x) < 0 && !facingRight)
+                Flip();
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (Mathf.Sign(r2d.velocity.x) > 0 && facingRight)
+                Flip();
+        }
     }
 
     void Flip()

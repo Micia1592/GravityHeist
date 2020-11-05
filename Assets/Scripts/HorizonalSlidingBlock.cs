@@ -8,19 +8,25 @@ public class HorizonalSlidingBlock : MonoBehaviour
     [SerializeField] private float maxDisplacement;
 
     private Vector2 startPosition;
-    private Rigidbody2D rgb2D;
 
-    private Vector2 direction = new Vector2(1, 0);
+    [SerializeField] private float moveSpeed = 1f;
+    private float localSpeed;
     // Start is called before the first frame update
     private void Start()
     {
         startPosition = this.transform.position;
-        rgb2D = GetComponent<Rigidbody2D>();
+        localSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //If were outside our set bounds, reverse speed
+        if (Mathf.Abs(startPosition.x - transform.position.x)>maxDisplacement){
+
+            localSpeed = -localSpeed;
+        }
+
+        transform.Translate(localSpeed*Time.deltaTime,0,0);
     }
 }
