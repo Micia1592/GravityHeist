@@ -25,19 +25,17 @@ public class Gravgun : MonoBehaviour
         mouseDirection.z = 0.0f;
         mouseDirection = Camera.main.ScreenToWorldPoint(mouseDirection);
         mouseDirection = mouseDirection - transform.position;
-        this.transform.right = mouseDirection - transform.position; //sprite direction
-       
+        this.transform.right = mouseDirection; //sprite direction
         //if the fire button is pressed
+
         if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-
+        { 
           
-
             //add audiosource here and/or animation
             //Shoot in that direction
             
             Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-            projectileInstance.velocity = new Vector2(mouseDirection.x * speed, mouseDirection.y* speed);
+            projectileInstance.velocity = new Vector2(mouseDirection.x * speed, mouseDirection.y * speed);
          
         }
     }
