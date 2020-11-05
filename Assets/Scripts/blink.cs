@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class blink : MonoBehaviour
 {
-    
     public GameObject blinkingObj;
 
     public float interval;

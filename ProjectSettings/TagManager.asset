@@ -7,6 +7,8 @@ TagManager:
   - GravityItem
   - Switch
   - Solid
+  - FallDetector
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
