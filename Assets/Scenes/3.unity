@@ -426,7 +426,12 @@ MonoBehaviour:
   maxSpeed: 3.4
   jumpHeight: 6.5
   gravityScale: 1.5
+  groundCheckLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  groundCheckRange: 0.1
   facingRight: 1
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!23 &320613711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3124,7 +3129,6 @@ GameObject:
   - component: {fileID: 1649851756}
   - component: {fileID: 1649851755}
   - component: {fileID: 1649851754}
-  - component: {fileID: 1649851753}
   m_Layer: 0
   m_Name: EndZone
   m_TagString: Untagged
@@ -3132,21 +3136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1649851753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649851752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4423a2dc036ed84cad17c7b42376943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 320613709}
-  spawn: {fileID: 879894728}
-  BoxSpawn: {fileID: 0}
 --- !u!50 &1649851754
 Rigidbody2D:
   serializedVersion: 4

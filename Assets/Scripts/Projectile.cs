@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
         else if (collision.tag == "Spinnable")
         {
 
-            
+            Debug.Log("spinnable");
             collision.gameObject.GetComponent<SpinWheelOnCol>().canRotate = true;
             Destroy(gameObject); 
 
