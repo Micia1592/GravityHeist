@@ -35,32 +35,7 @@ public class SpinWheelOnCol : MonoBehaviour
 
          
 
-            //else if ((this.transform.rotation.z >= -0.1) && (this.transform.rotation.z <= 0.99999))
-            //{
-
-            // this.transform.Rotate(Vector3.forward * (Time.deltaTime * 200));
-
-
-            //}
-            //else if (this.transform.rotation.z >= 360)
-            //{
-
-
-            //    //stop
-
-
-            //}
-
-            //else if (this.transform.rotation.z == 0.1)
-            //{
-            //    canRotate = false;
-            //}
-
-            //else if (this.transform.rotation.z == 360)
-            //{
-            //    canRotate = false;
-
-            //}
+           
 
 
 
