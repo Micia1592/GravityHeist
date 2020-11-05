@@ -7,10 +7,11 @@ public class Projectile : MonoBehaviour
 
     private GravityObject gravObj;
     private bool gravityInverted = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         Destroy(gameObject, 3);         //destroy the projectile after X number of seconds
+      
     }
 
    
@@ -36,13 +37,18 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
             Destroy(gameObject);
         }
+        else if (collision.tag == "Spinnable")
+        {
+
+            
+            collision.gameObject.GetComponent<SpinWheelOnCol>().canRotate = true;
+            Destroy(gameObject); 
+
+        }
+
 
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

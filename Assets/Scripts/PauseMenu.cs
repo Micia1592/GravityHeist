@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Time.timeScale == 1)
+            if (Time.timeScale == 1) //If the game is running, pause
             {
                 pauseCanvas.enabled = true;
                 Time.timeScale = 0;
