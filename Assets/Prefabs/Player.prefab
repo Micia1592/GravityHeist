@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 6296197202438596774, guid: 38d5208820a86e747bb7f73928c8075f,
     type: 3}
-  speed: 10
+  speed: 4
 --- !u!1 &5000276882766065221
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,11 +134,13 @@ MonoBehaviour:
   maxSpeed: 3.4
   jumpHeight: 5
   gravityScale: 1.5
+  airControlStrength: 10
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 0
   groundCheckRange: 0.1
   facingRight: 1
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &5000276882766065244
 MonoBehaviour:
   m_ObjectHideFlags: 0

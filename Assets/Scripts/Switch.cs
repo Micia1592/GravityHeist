@@ -16,6 +16,10 @@ public class Switch : MonoBehaviour
         {
             switchObj.SetActive(true);
         }
+        //if (collision.tag == "Player")
+        //{
+        //    switchObj.SetActive(false);
+        //}
     }
 
     // Start is called before the first frame update

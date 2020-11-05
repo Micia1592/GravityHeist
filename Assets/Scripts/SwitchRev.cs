@@ -16,5 +16,9 @@ public class SwitchRev : MonoBehaviour
         {
             switchObj.SetActive(false);
         }
+        //if (collision.tag == "Player")
+        //{
+        //    switchObj.SetActive(true);
+        //}
     }
 }
