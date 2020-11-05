@@ -598,6 +598,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 864874198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &864874200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4623896622507388136, guid: 9b4e5c7ce90af304c9e19d5b4035ac56,
+    type: 3}
+  m_PrefabInstance: {fileID: 864874198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &884177017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +611,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2083480443086701519, guid: 6c821c1778b865c47a5dab48fe7041e1,
+        type: 3}
+      propertyPath: SceneSwitcher
+      value: 
+      objectReference: {fileID: 864874200}
     - target: {fileID: 6077225653184282875, guid: 6c821c1778b865c47a5dab48fe7041e1,
         type: 3}
       propertyPath: m_Name

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6077225653184282879}
   - component: {fileID: 6077225653184282872}
   - component: {fileID: 6077225653184282873}
-  - component: {fileID: 6077225653184282874}
+  - component: {fileID: 2083480443086701519}
   m_Layer: 0
   m_Name: EndZone
   m_TagString: Untagged
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10650, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f98afd8b3166afb40b2303e4de2a2a01, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &6077225653184282874
+--- !u!114 &2083480443086701519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,9 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6077225653184282875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4423a2dc036ed84cad17c7b42376943, type: 3}
+  m_Script: {fileID: 11500000, guid: 7961f4963950a8649b49ab5853f852b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  spawn: {fileID: 0}
-  BoxSpawn: {fileID: 0}
+  SceneSwitcher: {fileID: 0}
