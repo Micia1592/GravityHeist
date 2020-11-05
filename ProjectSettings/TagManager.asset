@@ -9,6 +9,7 @@ TagManager:
   - Solid
   - FallDetector
   - CheckPoint
+  - Spinnable
   layers:
   - Default
   - TransparentFX

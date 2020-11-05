@@ -9052,5 +9052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpinnableCup
       objectReference: {fileID: 0}
+    - target: {fileID: 5632040498836591276, guid: 474071f2f8c229540be78040f0223edc,
+        type: 3}
+      propertyPath: m_TagString
+      value: FallDetector
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474071f2f8c229540be78040f0223edc, type: 3}
