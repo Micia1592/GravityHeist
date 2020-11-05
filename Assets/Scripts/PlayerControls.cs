@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
     [HideInInspector]
     public bool facingRight = true; //determine which way the character is facing
 
-
+    public Vector3 respawnPoint; //adding a respawn point to check where to spawn at a checkpoint
 
     // Use this for initialization
     void Start()
@@ -38,6 +38,8 @@ public class PlayerControls : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
         gravityObject = GetComponent<GravityObject>();
+
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -152,4 +154,16 @@ public class PlayerControls : MonoBehaviour
         return isGrounded;
         
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+        if (collision.tag == "CheckPoint")
+        {
+            respawnPoint = collision.transform.position;
+        }
+    }
+
 }
