@@ -17,7 +17,6 @@ public class PlayerControls : MonoBehaviour
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
     float moveDirection = 0;
-    bool isGrounded = false;
     Rigidbody2D r2d;
     Collider2D mainCollider;
 
@@ -25,6 +24,8 @@ public class PlayerControls : MonoBehaviour
 
     bool jumping = false;
     bool currGravityState= false;
+    
+    Rigidbody2D standingOn = null;
     Transform t;
 
     [HideInInspector]
@@ -60,9 +61,10 @@ public class PlayerControls : MonoBehaviour
             moveDirection = 0;
         }
         // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
             jumping = true;
+            standingOn = null;
         }
 
         if (Input.GetKeyDown("f"))
@@ -87,7 +89,9 @@ public class PlayerControls : MonoBehaviour
             r2d.velocity = new Vector2((maxSpeed*Mathf.Sign(r2d.velocity.x)), r2d.velocity.y);
         }
 
-        
+        //Update players facing (before factoring movement of object that the player is standing on)
+        UpdateOrientation();
+
         //Add jump force if needed
         if (jumping){
             //Jump goes negative if gravity on player is reversed
@@ -100,32 +104,46 @@ public class PlayerControls : MonoBehaviour
             jumping = false;
         }
 
-        UpdateOrientation();
+        //Update our final speed with the speed of the object we're standing on if required
+        if(IsGrounded()){
+            //Only update if there is a significant amount of movement (hack to avoid weird twitching when standing on rigidbodies)
+            if (Mathf.Abs(standingOn.velocity.x) > 0.01f){
+                r2d.velocity = new Vector2 ( r2d.velocity.x + standingOn.velocity.x, r2d.velocity.y);
+            }
+        }
+        
     }
 
     void UpdateOrientation(){
-        //Rotate if players gravity has switched and pdate local gravity state
+        //Rotate if players gravity has switched and update local gravity state
         if (currGravityState!=gravityObject.GetGravityState()){
             transform.Rotate(Vector3.forward * 180);
             currGravityState = gravityObject.GetGravityState();
         }
-        //Facing under normal gravity
-        if(!currGravityState){
-            // If the input is moving the player right and the player is facing left...
-            if (Mathf.Sign(r2d.velocity.x) > 0 && !facingRight)
-                Flip();
-            // Otherwise if the input is moving the player left and the player is facing right...
-            else if (Mathf.Sign(r2d.velocity.x) < 0 && facingRight)
-                Flip();
-        }
-        //Facing under inverted gravity
-        else{
-            // If the input is moving the player right and the player is facing left...
-            if (Mathf.Sign(r2d.velocity.x) < 0 && !facingRight)
-                Flip();
-            // Otherwise if the input is moving the player left and the player is facing right...
-            else if (Mathf.Sign(r2d.velocity.x) > 0 && facingRight)
-                Flip();
+        //Update facing, but only if velocity is greater than 0 (standing still should change nothing)
+        if (Mathf.Abs(r2d.velocity.x)>0){
+            //Facing under normal gravity
+            if(!currGravityState){
+                // If the input is moving the player right and the player is facing left...
+                if (Mathf.Sign(r2d.velocity.x) > 0 && !facingRight){
+                    Flip();
+                    Debug.Log("Player velocity is: " + r2d.velocity.x +" so triggering Flip 1");
+                }
+                // Otherwise if the input is moving the player left and the player is facing right...
+                else if (Mathf.Sign(r2d.velocity.x) < 0 && facingRight){
+                    Flip();
+                    
+                }
+            }
+            //Facing under inverted gravity
+            else{
+                // If the input is moving the player right and the player is facing left...
+                if (Mathf.Sign(r2d.velocity.x) < 0 && !facingRight)
+                    Flip();
+                // Otherwise if the input is moving the player left and the player is facing right...
+                else if (Mathf.Sign(r2d.velocity.x) > 0 && facingRight)
+                    Flip();
+            }
         }
     }
 
@@ -154,12 +172,17 @@ public class PlayerControls : MonoBehaviour
         }
         localIsGrounded = Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer);
 
-        isGrounded = localIsGrounded;
+        //Grab the RigidBody were standing on if it exists
+        if (localIsGrounded){
+            standingOn = Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer).gameObject.GetComponent<Rigidbody2D>();
+        }
+
         //Debug by drawing the line were casting to check the ground
         //Debug.DrawLine(feetPosition, new Vector2(feetPosition.x, feetPosition.y - groundCheckRange), isGrounded ? Color.green : Color.red);
-        return isGrounded;
+        return localIsGrounded;
         
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
