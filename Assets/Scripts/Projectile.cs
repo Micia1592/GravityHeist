@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour
         {
 
             Debug.Log("spinnable");
-            collision.gameObject.GetComponent<SpinWheelOnCol>().canRotate = true;
+            collision.gameObject.GetComponent<SpinCupOnCollision>().canRotate = true;
             Destroy(gameObject); 
 
         }

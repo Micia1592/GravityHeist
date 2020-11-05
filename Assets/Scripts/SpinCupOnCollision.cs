@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinWheelOnCol : MonoBehaviour
+public class SpinCupOnCollision : MonoBehaviour
 {
 
     //public Transform objTransform;
