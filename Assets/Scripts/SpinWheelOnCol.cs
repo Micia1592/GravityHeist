@@ -28,7 +28,7 @@ public class SpinWheelOnCol : MonoBehaviour
 
              if ((this.transform.rotation.z >= 0) && (this.transform.rotation.z <= 1))
             {
-                Debug.Log(this.transform.rotation.z);
+                //Debug.Log(this.transform.rotation.z);
                 this.transform.Rotate(Vector3.forward * (Time.deltaTime * 180));
                
             }
