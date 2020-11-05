@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour
+public class SwitchRev : MonoBehaviour
 {
     public GameObject switchObj;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -10,23 +10,11 @@ public class Switch : MonoBehaviour
         if (collision.tag == "Switch")
         {
             Debug.Log("SWITCH");
-            switchObj.SetActive(false);
-        }
-        else 
-        {
             switchObj.SetActive(true);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else
+        {
+            switchObj.SetActive(false);
+        }
     }
 }

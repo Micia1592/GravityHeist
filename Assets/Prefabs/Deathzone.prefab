@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2708341916651530027}
   m_Layer: 0
   m_Name: Deathzone
-  m_TagString: Untagged
+  m_TagString: FallDetector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

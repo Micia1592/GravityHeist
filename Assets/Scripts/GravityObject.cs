@@ -14,6 +14,7 @@ public class GravityObject : MonoBehaviour
         globalGravityState = false;
         localGravityState = false;
         GameStateController.OnGravityChange += HandleGlobalGravitySwitch;
+        
     }
 
 
@@ -34,9 +35,11 @@ public class GravityObject : MonoBehaviour
     private void SetGravity(){
         if ((!globalGravityState&&!localGravityState)||(globalGravityState&&localGravityState)){
             rgb2d.gravityScale = Mathf.Abs(rgb2d.gravityScale);
+            
         }
         else {
             rgb2d.gravityScale = -Mathf.Abs(rgb2d.gravityScale);
+            
         }
     }
 
