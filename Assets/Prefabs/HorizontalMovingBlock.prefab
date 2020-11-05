@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2140079513327206296}
   - component: {fileID: 2140079513327206292}
   - component: {fileID: 2140079513327206288}
-  - component: {fileID: 2140079513327206289}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
@@ -159,32 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDisplacement: 1.5
   moveSpeed: 1
---- !u!234 &2140079513327206289
-SliderJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140079513327206301}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -5.477944, y: 0.84096146}
-  m_AutoConfigureAngle: 0
-  m_Angle: 0
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 1
-    m_MaximumMotorForce: 50
-  m_UseLimits: 1
-  m_TranslationLimits:
-    m_LowerTranslation: -1.2
-    m_UpperTranslation: 1.2
 --- !u!1 &2140079514219898180
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,11 @@ public class GravityObject : MonoBehaviour
         
     }
 
+    //Unsubscribe on destruction
+    private void OnDestroy() {
+        GameStateController.OnGravityChange -= HandleGlobalGravitySwitch;
+    }
+
 
     private void HandleGlobalGravitySwitch(bool newGrav){
 
@@ -33,6 +38,7 @@ public class GravityObject : MonoBehaviour
 
     //Set the gravity scale of current object based on both global and local gravity settings
     private void SetGravity(){
+        Debug.Log("Switching gravity on object: " + this.gameObject.name);
         if ((!globalGravityState&&!localGravityState)||(globalGravityState&&localGravityState)){
             rgb2d.gravityScale = Mathf.Abs(rgb2d.gravityScale);
             
