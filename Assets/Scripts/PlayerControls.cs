@@ -11,14 +11,14 @@ public class PlayerControls : MonoBehaviour
     public float maxSpeed = 3.4f;
     public float jumpHeight = 6.5f;
     public float gravityScale = 1.5f;
-
     public float airControlStrength = 10F;
-
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
     float moveDirection = 0;
     Rigidbody2D r2d;
     Collider2D mainCollider;
+
+    ObjectGrabber grabber;
 
     GravityObject gravityObject;
 
@@ -43,6 +43,7 @@ public class PlayerControls : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
         gravityObject = GetComponent<GravityObject>();
+        grabber = GetComponent<ObjectGrabber>();
 
         respawnPoint = transform.position;
     }
@@ -149,13 +150,16 @@ public class PlayerControls : MonoBehaviour
 
     void Flip()
     {
-        // Switch the way the player is labelled as facing.
-        facingRight = !facingRight;
+        //Disallow flipping if the player is currently grabbing something
+        if (!grabber.grabbing){
+            // Switch the way the player is labelled as facing.
+            facingRight = !facingRight;
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+            // Multiply the player's x local scale by -1.
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
     }
 
     private bool IsGrounded(){
