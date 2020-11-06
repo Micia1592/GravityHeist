@@ -22,7 +22,7 @@ TagManager:
   - Player
   - LiquidEffectLayer
   - Groundable
-  - 
+  - background
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: level
+    uniqueID: 576992863
+    locked: 0
+  - name: background
+    uniqueID: 129357877
     locked: 0
