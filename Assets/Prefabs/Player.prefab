@@ -164,12 +164,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3.4
-  jumpHeight: 5
+  jumpHeight: 5.75
   gravityScale: 1.5
-  airControlStrength: 10
+  airControlStrength: 15
   groundCheckLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   groundCheckRange: 0.1
   facingRight: 1
   respawnPoint: {x: 0, y: 0, z: 0}
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9155243ea93f2684789ae881ca9c9f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabbing: 0
   grabLayer:
     serializedVersion: 2
     m_Bits: 1024
