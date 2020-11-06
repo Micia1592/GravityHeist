@@ -42,8 +42,7 @@ public class Gravgun : MonoBehaviour
            
             mouseDirection = mouseDirection - transform.position;
             Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-            projectileInstance.velocity = new Vector2(mouseDirection.x * speed, mouseDirection.y* speed);
-         
+            projectileInstance.velocity = new Vector2(this.transform.right.x * speed, this.transform.right.y* speed);
         }
     }
 }
