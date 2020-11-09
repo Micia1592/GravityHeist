@@ -6,7 +6,7 @@ public class GameStateController : MonoBehaviour
 {
     //Event for global gravity changing
     public static event Action<bool> OnGravityChange;
-    private bool gravityInverted = false;
+    public bool gravityInverted = false;
 
     public bool GetGravityInverted(){
         return gravityInverted;

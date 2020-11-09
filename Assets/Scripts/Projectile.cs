@@ -50,7 +50,7 @@ public class Projectile : MonoBehaviour
         {
 
             Debug.Log("Wheel");
-            collision.gameObject.GetComponent<WheelSpin>().noGrav = !collision.gameObject.GetComponent<WheelSpin>().noGrav; //switch
+            collision.gameObject.GetComponent<WheelSpin>().noGrav = !collision.gameObject.GetComponent<WheelSpin>().noGrav;
             Destroy(gameObject);
 
         }
