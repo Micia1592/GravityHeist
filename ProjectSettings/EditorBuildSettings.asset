@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Platform_1-1.unity
     guid: 2107ddfe47e76174593457604241dbf9
   - enabled: 1
+    path: Assets/Scenes/boxintro.unity
+    guid: 904e2412e760e004d869c3cc8af4dea3
+  - enabled: 1
     path: Assets/Scenes/hub.unity
     guid: 0209522ea9c996f4b9f910b36efd9827
   - enabled: 1
