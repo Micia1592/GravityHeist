@@ -54,9 +54,7 @@ public class PlayerControls : MonoBehaviour
     
     void Update()
     {
-       
         
-
         if (gravityFlipAllowed){
 
             if (Input.GetKeyDown("f"))
