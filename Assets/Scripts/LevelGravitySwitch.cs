@@ -13,7 +13,7 @@ public class LevelGravitySwitch : MonoBehaviour
         if (other.gameObject.layer == 8){
             playerClose = true;
 
-            Debug.Log("Player entered button area");
+            //Debug.Log("Player entered button area");
         }
     }
 
@@ -21,7 +21,7 @@ public class LevelGravitySwitch : MonoBehaviour
         if (other.gameObject.layer == 8){
             playerClose = false;
 
-            Debug.Log("Player left button area");
+            //Debug.Log("Player left button area");
         }
     }
 
