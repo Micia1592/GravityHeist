@@ -9,6 +9,9 @@ public class Gravgun : MonoBehaviour
 
     private PlayerControls playerCtrl;  //referencing the playercontrol script
     private Transform aimTransform;
+
+    private GravityObject currentlyInvertedObject;
+    private bool invertedActive = false;
     
 
     private void Awake()
@@ -31,10 +34,6 @@ public class Gravgun : MonoBehaviour
         this.transform.right = direction; 
 
 
-
-
-
-
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
 
@@ -43,6 +42,25 @@ public class Gravgun : MonoBehaviour
             mouseDirection = mouseDirection - transform.position;
             Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
             projectileInstance.velocity = new Vector2(this.transform.right.x * speed, this.transform.right.y* speed);
+            projectileInstance.GetComponent<Projectile>().SetParentGun(this.GetComponent<Gravgun>());
         }
+
+        //Drop object on right click
+        if (Input.GetKeyUp(KeyCode.Mouse1)){
+            currentlyInvertedObject.SwitchLocalGravity();
+            currentlyInvertedObject = null;
+            invertedActive = false;
+        }
+    }
+
+    public void InvertNewObject(GravityObject gravObject){
+        //Drop current object if present
+        if (invertedActive){
+            currentlyInvertedObject.SwitchLocalGravity();
+        }
+
+        currentlyInvertedObject = gravObject;
+        currentlyInvertedObject.SwitchLocalGravity();
+        invertedActive = true;
     }
 }

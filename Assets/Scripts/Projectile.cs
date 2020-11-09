@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     private GravityObject gravObj;
     private bool gravityInverted = false;
 
+    private Gravgun parentGravgun;
+
     void Start()
     {
         Destroy(gameObject, 3);         //destroy the projectile after X number of seconds
@@ -19,7 +21,9 @@ public class Projectile : MonoBehaviour
     {
         if(collision.tag == "GravityItem")
         {
-            collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
+            Debug.Log("New object hit by grav gun");
+            parentGravgun.InvertNewObject(collision.gameObject.GetComponent<GravityObject>());
+            //collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
 
             //GetComponent<Rigidbody2D>().gravityScale *= -1;
             //transform.Rotate(Vector3.forward * 180);
@@ -34,7 +38,8 @@ public class Projectile : MonoBehaviour
         }
         else if (collision.tag == "Switch")
         {
-            collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
+            //collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
+            parentGravgun.InvertNewObject(collision.gameObject.GetComponent<GravityObject>());
             Destroy(gameObject);
         }
         else if (collision.tag == "Spinnable")
@@ -55,6 +60,10 @@ public class Projectile : MonoBehaviour
 
         }
 
+    }
+
+    public void SetParentGun(Gravgun parent){
+        parentGravgun = parent;
     }
 
    

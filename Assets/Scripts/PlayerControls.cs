@@ -14,6 +14,8 @@ public class PlayerControls : MonoBehaviour
     public float airControlStrength = 10F;
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
+
+    [SerializeField] private bool gravityFlipAllowed = false;
     float moveDirection = 0;
     Rigidbody2D r2d;
     Collider2D mainCollider;
@@ -68,10 +70,13 @@ public class PlayerControls : MonoBehaviour
             standingOn = null;
         }
 
-        if (Input.GetKeyDown("f"))
-        {
-             this.gravityObject.SwitchLocalGravity();
-             Flip();
+        if (gravityFlipAllowed){
+
+            if (Input.GetKeyDown("f"))
+            {
+                this.gravityObject.SwitchLocalGravity();
+                Flip();
+            }
         }
     }
 
