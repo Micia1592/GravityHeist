@@ -22,11 +22,15 @@ public class ObjectGrabber : MonoBehaviour
     void Update()
     {
         //Check to see if we are too far from grabbed object
+        
         if (grabbing&&Vector2.Distance(GrabLocation.position, grabbedObject.transform.position)>GrabRange){
+            Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
             grabbing=false;
             grabbedObject = null;
             grabbedObjectRgb2D = null;
+            
         }
+        
         DrawDebugLine();
         //Pressing the grab button
         if (Input.GetKeyUp(KeyCode.LeftControl)){
@@ -42,10 +46,13 @@ public class ObjectGrabber : MonoBehaviour
                     grabbing = true;
                     grabbedObject = toGrab.transform.gameObject;
                     grabbedObjectRgb2D = grabbedObject.GetComponent<Rigidbody2D>();
+                    //Remove collision on grabbed object
+                    Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>());
                 }
             }
             //Logic to release grabbed object on second key press
             else{
+                Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
                 grabbing=false;
                 grabbedObject = null;
                 grabbedObjectRgb2D = null;
@@ -70,11 +77,15 @@ public class ObjectGrabber : MonoBehaviour
 
     }
 
+    //Remove collision if you colide with the block you're grabbing
+    /*
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject == grabbedObject){
             Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>());
         }
     }
+    */
+
 
     void OnDrawGizmosSelected()
     {

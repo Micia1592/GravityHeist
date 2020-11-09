@@ -71,6 +71,7 @@ public class PlayerControls : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
              this.gravityObject.SwitchLocalGravity();
+             Flip();
         }
     }
 
@@ -119,6 +120,10 @@ public class PlayerControls : MonoBehaviour
         //Rotate if players gravity has switched and update local gravity state
         if (currGravityState!=gravityObject.GetGravityState()){
             transform.Rotate(Vector3.forward * 180);
+            //Added flip if velocity is greater than 0, to correct facing after inversion
+            if (Mathf.Abs(r2d.velocity.x)>0){
+                Flip();
+            }
             currGravityState = gravityObject.GetGravityState();
         }
         //Update facing, but only if velocity is greater than 0 (standing still should change nothing)
