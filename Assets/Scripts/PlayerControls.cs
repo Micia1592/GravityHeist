@@ -64,7 +64,7 @@ public class PlayerControls : MonoBehaviour
             moveDirection = 0;
         }
         // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             jumping = true;
             standingOn = null;

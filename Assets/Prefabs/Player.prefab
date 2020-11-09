@@ -171,6 +171,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   groundCheckRange: 0.1
+  gravityFlipAllowed: 0
   facingRight: 1
   respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &5000276882766065244
@@ -252,5 +253,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   GrabRange: 1
-  GrabForce: 10
+  GrabForce: 20
   GrabLocation: {fileID: 7237915547063874475}

@@ -12,14 +12,22 @@ public class Switch : MonoBehaviour
             Debug.Log("SWITCH");
             switchObj.SetActive(false);
         }
-        else 
-        {
-            switchObj.SetActive(true);
-        }
+        //else 
+        //{
+        //    switchObj.SetActive(true);
+        //}
         //if (collision.tag == "Player")
         //{
         //    switchObj.SetActive(false);
         //}
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Switch")
+        {
+            Debug.Log("SWITCH");
+            switchObj.SetActive(true);
+        }
     }
 
     // Start is called before the first frame update
