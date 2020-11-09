@@ -4794,6 +4794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noGrav: 0
+  gameStateController: {fileID: 0}
 --- !u!50 &1128653816
 Rigidbody2D:
   serializedVersion: 4
@@ -5223,6 +5224,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlidingBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589792, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589798, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.758655
+      objectReference: {fileID: 0}
+    - target: {fileID: 707325206012589798, guid: 19de5defd216a4c4a8552d7d841726c1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.45044005
       objectReference: {fileID: 0}
     - target: {fileID: 707325206012589799, guid: 19de5defd216a4c4a8552d7d841726c1,
         type: 3}
