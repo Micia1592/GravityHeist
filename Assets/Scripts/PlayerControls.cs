@@ -12,6 +12,7 @@ public class PlayerControls : MonoBehaviour
     public float jumpHeight = 6.5f;
     public float gravityScale = 1.5f;
     public float airControlStrength = 10F;
+    public float noInputBreakForce = 0.1f;
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
 
@@ -53,22 +54,8 @@ public class PlayerControls : MonoBehaviour
     
     void Update()
     {
-        // Movement controls
-        //Current intention is that Update() captures all of the player intended inputs, FixedUpdate() then interprets them
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
-        {
-            moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
-        }
-        else
-        {
-            moveDirection = 0;
-        }
-        // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
-        {
-            jumping = true;
-            standingOn = null;
-        }
+       
+        
 
         if (gravityFlipAllowed){
 
@@ -82,22 +69,25 @@ public class PlayerControls : MonoBehaviour
 
     void FixedUpdate()
     {
+         // Jumping
+        if (Input.GetAxis("Jump")>0 && IsGrounded())
+        {
+            jumping = true;
+            standingOn = null;
+        }
         // Apply movement velocity
         //Apply full speed in desired direction if grounded
         if (IsGrounded()){
-            r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
+            r2d.velocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, r2d.velocity.y);
         }
         //Else if we arent grounded, add force in the desired direction
         else{
-            r2d.AddForce(new Vector2(airControlStrength*moveDirection, 0));
+            r2d.AddForce(new Vector2(Input.GetAxis("Horizontal")*airControlStrength, 0));
         }
         //Limit horizontal speed to max speed
         if(Mathf.Abs(r2d.velocity.x)>maxSpeed){
             r2d.velocity = new Vector2((maxSpeed*Mathf.Sign(r2d.velocity.x)), r2d.velocity.y);
         }
-
-        //Update players facing (before factoring movement of object that the player is standing on)
-        UpdateOrientation();
 
         //Add jump force if needed
         if (jumping){
@@ -110,6 +100,25 @@ public class PlayerControls : MonoBehaviour
             }
             jumping = false;
         }
+
+        //Add a constant break force if no horizontal movekeys are held and velocity greater than 1
+        /*
+        if (Input.GetAxis("Horizontal")==0&&r2d.velocity.x>noInputBreakForce){
+            Debug.Log("Applying break force");
+            float currXVelocity = Mathf.Abs(r2d.velocity.x);
+            bool xVolPositive = r2d.velocity.x>0;
+            if (xVolPositive){
+                r2d.velocity = new Vector2(currXVelocity-noInputBreakForce, r2d.velocity.y);
+            }
+            else{
+                r2d.velocity = new Vector2(currXVelocity+noInputBreakForce, r2d.velocity.y);
+            }
+            
+        }
+        */
+
+        //Update players facing (before factoring movement of object that the player is standing on)
+        UpdateOrientation();
 
         //Update our final speed with the speed of the object we're standing on if required
         if(IsGrounded()){
@@ -138,7 +147,7 @@ public class PlayerControls : MonoBehaviour
                 // If the input is moving the player right and the player is facing left...
                 if (Mathf.Sign(r2d.velocity.x) > 0 && !facingRight){
                     Flip();
-                    Debug.Log("Player velocity is: " + r2d.velocity.x +" so triggering Flip 1");
+                    //Debug.Log("Player velocity is: " + r2d.velocity.x +" so triggering Flip 1");
                 }
                 // Otherwise if the input is moving the player left and the player is facing right...
                 else if (Mathf.Sign(r2d.velocity.x) < 0 && facingRight){

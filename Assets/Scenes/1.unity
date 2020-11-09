@@ -1595,6 +1595,11 @@ PrefabInstance:
       propertyPath: airControlStrength
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5000276882766065222, guid: f8640b935aa76b444b6e05af715045f5,
+        type: 3}
+      propertyPath: noInputBreakForce
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5000276882766065241, guid: f8640b935aa76b444b6e05af715045f5,
         type: 3}
       propertyPath: m_LocalPosition.x
