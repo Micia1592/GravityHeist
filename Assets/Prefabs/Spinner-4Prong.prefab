@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6634858555858680271}
   m_Layer: 10
   m_Name: Floor (5)
-  m_TagString: Solid
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6634858557041397366}
   m_Layer: 10
   m_Name: Spinner-4Prong
-  m_TagString: Solid
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,3 +270,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d815e4e528de45042880b7e2af46f946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noGrav: 0

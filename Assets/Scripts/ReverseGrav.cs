@@ -5,7 +5,13 @@ using UnityEngine;
 public class ReverseGrav : MonoBehaviour
 {
     private bool gravityInverted = true;
+    private PlayerControls playerCtrl;
 
+
+    private void Awake()
+    {
+        playerCtrl = transform.root.GetComponent<PlayerControls>();
+    }
     void Update ()
     {
         if (Input.GetKeyDown(KeyCode.F))

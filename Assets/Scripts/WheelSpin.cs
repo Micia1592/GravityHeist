@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class WheelSpin : MonoBehaviour
 {
-   
-    // Update is called once per frame
+
+    private PlayerControls playerCtrl;
+    public bool noGrav;
+
+    private void Awake()
+    {
+        playerCtrl = transform.root.GetComponent<PlayerControls>();
+    }
+
     void Update()
     {
-        transform.Rotate(Vector3.forward * -1);
+
+        if (noGrav == false)
+        {
+            transform.Rotate(Vector3.forward * -1);
+        }
+
+
+        else if (noGrav == true)
+        {
+            transform.Rotate(Vector3.forward * 1);
+        }
     }
 }

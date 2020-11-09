@@ -46,7 +46,14 @@ public class Projectile : MonoBehaviour
 
         }
 
+        else if (collision.tag == "Wheel")
+        {
 
+            Debug.Log("Wheel");
+            collision.gameObject.GetComponent<WheelSpin>().noGrav = !collision.gameObject.GetComponent<WheelSpin>().noGrav; //switch
+            Destroy(gameObject);
+
+        }
 
     }
 
