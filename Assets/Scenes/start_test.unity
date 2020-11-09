@@ -121,36 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &19685746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 19685747}
-  m_Layer: 0
-  m_Name: Start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &19685747
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19685746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7439882, y: -0.9979449, z: -76.94336}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32550119
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +166,7 @@ Transform:
   - {fileID: 79362026}
   - {fileID: 184015000}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &79362025
 GameObject:
@@ -670,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 4623896622507388138, guid: 9b4e5c7ce90af304c9e19d5b4035ac56,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4623896622507388138, guid: 9b4e5c7ce90af304c9e19d5b4035ac56,
         type: 3}
@@ -947,7 +917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &801349439
 PrefabInstance:
@@ -974,7 +944,7 @@ PrefabInstance:
     - target: {fileID: 5000276882766065222, guid: f8640b935aa76b444b6e05af715045f5,
         type: 3}
       propertyPath: airControlStrength
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5000276882766065223, guid: f8640b935aa76b444b6e05af715045f5,
         type: 3}
@@ -1174,7 +1144,7 @@ Transform:
   - {fileID: 1630452915}
   - {fileID: 1556270209}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1556270209 stripped
 Transform:
@@ -1361,7 +1331,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1865203052}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3580512fd2a10b0469b8e56275192814, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
