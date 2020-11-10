@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
- 
-
+    public Animator transition;
+    public float transitionTime;
     public void SceneChange()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //next level
-        //Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
+        
+      StartCoroutine(( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1))); //next level
+       
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex); //next level
+
     }
 }
