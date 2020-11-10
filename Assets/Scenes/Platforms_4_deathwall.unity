@@ -1610,7 +1610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815104228
 GameObject:
@@ -1944,7 +1944,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneSwitcher
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1681684549}
     - target: {fileID: 6077225653184282872, guid: 6c821c1778b865c47a5dab48fe7041e1,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2688,7 +2688,7 @@ Transform:
   m_Children:
   - {fileID: 1165631619}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412019388
 GameObject:
@@ -3722,6 +3722,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1681684549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4443344282232286627, guid: 9b4e5c7ce90af304c9e19d5b4035ac56,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063297324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1809054236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2545439177712419715, guid: 31c06284fe729d341984b5c867fbc155,
