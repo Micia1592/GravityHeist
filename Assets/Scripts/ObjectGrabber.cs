@@ -20,6 +20,9 @@ public class ObjectGrabber : MonoBehaviour
     [SerializeField] private float grabTorqueLimit = 5f;
     [SerializeField] private float grabForceLimit = 5f;
 
+    [SerializeField] private GameObject grabEffect;
+    private GameObject currGravEffect;
+
     private GameObject grabbedObject;
     private Rigidbody2D grabbedObjectRgb2D;
     // Start is called before the first frame update
@@ -72,6 +75,7 @@ public class ObjectGrabber : MonoBehaviour
         grabbedObject.GetComponent<FixedJoint2D>().enabled=false;
         grabbedObject = null;
         grabbedObjectRgb2D = null;
+        Destroy(currGravEffect);
     }
 
     void GrabObject(GameObject toGrab){
@@ -80,6 +84,11 @@ public class ObjectGrabber : MonoBehaviour
             toGrab.GetComponent<FixedJoint2D>().enabled = true;
             toGrab.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             grabbedObject = toGrab;
+            currGravEffect = Instantiate(grabEffect);
+            //Add gravity effect as parent of grabbed object and move it to the grabbed objects position
+            currGravEffect.transform.parent = grabbedObject.transform;
+            currGravEffect.transform.position = grabbedObject.transform.position;
+
         }
     }
 

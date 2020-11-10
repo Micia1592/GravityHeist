@@ -256,3 +256,7 @@ MonoBehaviour:
   GrabRange: 1
   GrabForce: 20
   GrabLocation: {fileID: 7237915547063874475}
+  grabTorqueLimit: 5
+  grabForceLimit: 5
+  grabEffect: {fileID: 1113046467830523238, guid: 296d8ed3fa4e7db42999ec41f71cb948,
+    type: 3}
