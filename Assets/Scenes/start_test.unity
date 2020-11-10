@@ -1020,16 +1020,6 @@ PrefabInstance:
       propertyPath: groundCheckLayer.m_Bits
       value: 1024
       objectReference: {fileID: 0}
-    - target: {fileID: 5000276882766065222, guid: f8640b935aa76b444b6e05af715045f5,
-        type: 3}
-      propertyPath: jumpHeight
-      value: 5.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000276882766065222, guid: f8640b935aa76b444b6e05af715045f5,
-        type: 3}
-      propertyPath: airControlStrength
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5000276882766065223, guid: f8640b935aa76b444b6e05af715045f5,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -3699,6 +3689,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1539858206}
     m_Modifications:
+    - target: {fileID: 2545439177712419712, guid: 31c06284fe729d341984b5c867fbc155,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2545439177712419715, guid: 31c06284fe729d341984b5c867fbc155,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3898,6 +3893,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1539858206}
     m_Modifications:
+    - target: {fileID: 2545439177712419712, guid: 31c06284fe729d341984b5c867fbc155,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2545439177712419715, guid: 31c06284fe729d341984b5c867fbc155,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3906,7 +3906,7 @@ PrefabInstance:
     - target: {fileID: 2545439177712419715, guid: 31c06284fe729d341984b5c867fbc155,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4735337
+      value: -1.51
       objectReference: {fileID: 0}
     - target: {fileID: 2545439177712419715, guid: 31c06284fe729d341984b5c867fbc155,
         type: 3}
