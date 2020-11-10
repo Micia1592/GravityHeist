@@ -29,6 +29,7 @@ public class PlayerControls : MonoBehaviour
     bool currGravityState= false;
     
     Rigidbody2D standingOn = null;
+
     Transform t;
 
     [HideInInspector]
@@ -65,6 +66,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    //Fixed update is where all movement inputs are accepted, and the forces on the players rigidbody are updated
     void FixedUpdate()
     {
          // Jumping
@@ -119,12 +121,14 @@ public class PlayerControls : MonoBehaviour
         UpdateOrientation();
 
         //Update our final speed with the speed of the object we're standing on if required
-        if(IsGrounded()){
+        if(IsGrounded()&&standingOn!=null){
             //Only update if there is a significant amount of movement (hack to avoid weird twitching when standing on rigidbodies)
             if (Mathf.Abs(standingOn.velocity.x) > 0.01f){
                 r2d.velocity = new Vector2 ( r2d.velocity.x + standingOn.velocity.x, r2d.velocity.y);
             }
         }
+        //Check for horizontal collisions with walls
+        //HorizontalColChecker();
         
     }
 
@@ -195,13 +199,38 @@ public class PlayerControls : MonoBehaviour
 
         //Grab the RigidBody were standing on if it exists
         if (localIsGrounded){
-            standingOn = Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer).gameObject.GetComponent<Rigidbody2D>();
+            if (Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer).gameObject.GetComponent<Rigidbody2D>() != null){
+                standingOn = Physics2D.OverlapCircle(feetPosition, groundCheckRange, groundCheckLayer).gameObject.GetComponent<Rigidbody2D>();
+            }
         }
 
         //Debug by drawing the line were casting to check the ground
         //Debug.DrawLine(feetPosition, new Vector2(feetPosition.x, feetPosition.y - groundCheckRange), isGrounded ? Color.green : Color.red);
         return localIsGrounded;
         
+    }
+
+    //Detects if we have just colided with a wall, sets horizontal velocity to 0 if so
+    private void HorizontalColChecker() {
+        
+        //Debug.Log("Checking for horizontal collisions");
+        //float colDetectRange = Mathf.Abs(r2d.velocity.x);
+        float colDetectRange = 0.23f;
+        RaycastHit2D wall;
+        if (gravityObject.GetGravityState()){
+            wall = Physics2D.Raycast(transform.position, new Vector2(transform.position.x - (1*Mathf.Sign(transform.localScale.x)), 0), colDetectRange,groundCheckLayer);
+            Debug.DrawLine(transform.position, new Vector2(transform.position.x - (colDetectRange*Mathf.Sign(transform.localScale.x)), transform.position.y), Color.red);
+        }
+        else{
+            wall = Physics2D.Raycast(transform.position, new Vector2(transform.position.x + (1*Mathf.Sign(transform.localScale.x)), 0), colDetectRange,groundCheckLayer);
+            Debug.DrawLine(transform.position, new Vector2(transform.position.x + (colDetectRange*Mathf.Sign(transform.localScale.x)), transform.position.y), Color.red);
+        }
+
+        if (wall.transform !=null){
+            Debug.Log("We hit a wall, setting x velocity to 0");
+            r2d.velocity = new Vector2(0, r2d.velocity.y);
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)

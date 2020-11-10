@@ -33,6 +33,7 @@ public class ObjectGrabber : MonoBehaviour
         if (grabbing&&Vector2.Distance(GrabLocation.position, grabbedObject.transform.position)>GrabRange){
             Debug.Log("Grab releasd as object out of range");
             Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
+            grabbedObjectRgb2D.isKinematic = false;
             grabbing=false;
             grabbedObject = null;
             grabbedObjectRgb2D = null;
@@ -40,7 +41,7 @@ public class ObjectGrabber : MonoBehaviour
         }
         
         //Draw line showing the grab range
-        DrawDebugLine();
+        //DrawDebugLine();
         //Pressing the grab button
         if (Input.GetKeyUp(KeyCode.LeftControl)){
 
@@ -62,13 +63,15 @@ public class ObjectGrabber : MonoBehaviour
                     grabbing = true;
                     grabbedObject = toGrab.transform.gameObject;
                     grabbedObjectRgb2D = grabbedObject.GetComponent<Rigidbody2D>();
+                    grabbedObjectRgb2D.isKinematic = true;
                     //Remove collision on grabbed object
-                    Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>());
+                    Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), true);
                 }
             }
             //Logic to release grabbed object on second key press
             else{
                 Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
+                grabbedObjectRgb2D.isKinematic = false;
                 grabbing=false;
                 grabbedObject = null;
                 grabbedObjectRgb2D = null;
@@ -83,13 +86,13 @@ public class ObjectGrabber : MonoBehaviour
     void PullObject(){
 
         //Only pull the object if it isnt too close
-        if (Mathf.Abs(GrabLocation.position.x - grabbedObject.transform.position.x)>GrabMinDist){
-            grabbedObjectRgb2D.AddForce((GrabLocation.position - grabbedObject.transform.position)*(GrabForce));
-        }
+       // if (Mathf.Abs(GrabLocation.position.x - grabbedObject.transform.position.x)>GrabMinDist){
+           // grabbedObjectRgb2D.AddForce((GrabLocation.position - grabbedObject.transform.position)*(GrabForce));
+        //}
         //Otherwise, just set its x position (not setting y to avoid pushing it into the floor)
-        else{
+        //else{
             grabbedObject.transform.position = new Vector2(GrabLocation.transform.position.x, grabbedObject.transform.position.y);
-        }
+        //}
 
     }
 

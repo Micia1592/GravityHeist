@@ -144,7 +144,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 5000276882766065221}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9ce86b457102fb548b181e41af40042a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   jumpHeight: 5.75
   gravityScale: 1.5
   airControlStrength: 15
+  noInputBreakForce: 0.1
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 1024
