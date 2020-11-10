@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2792015255145869760}
   - component: {fileID: 2792015255145869761}
   - component: {fileID: 2792015255145869774}
+  - component: {fileID: 3424305228622294381}
   m_Layer: 10
   m_Name: BoxBlue
   m_TagString: Switch
@@ -143,3 +144,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2e327047d15d949bd990d7c61f7fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!255 &3424305228622294381
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2792015255145869775}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 6.67, y: 0.35}
+  m_DampingRatio: 0
+  m_Frequency: 0

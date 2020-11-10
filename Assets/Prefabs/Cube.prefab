@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7247957525045522730}
   - component: {fileID: 7247957525045522734}
   - component: {fileID: 7247957525045522729}
+  - component: {fileID: 6965937036665676106}
   m_Layer: 10
   m_Name: Cube
   m_TagString: GravityItem
@@ -156,3 +157,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2bf080e0f92a6440a1dd0d93387a9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!255 &6965937036665676106
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247957525045522735}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_DampingRatio: 0
+  m_Frequency: 0

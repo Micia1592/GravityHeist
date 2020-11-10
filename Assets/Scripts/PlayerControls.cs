@@ -171,8 +171,8 @@ public class PlayerControls : MonoBehaviour
 
     void Flip()
     {
-        //Disallow flipping if the player is currently grabbing something
-        if (!grabber.grabbing){
+        //Disallow flipping if the player is currently grabbing something - Not now needed
+        //if (!grabber.grabbing){
             // Switch the way the player is labelled as facing.
             facingRight = !facingRight;
 
@@ -180,7 +180,7 @@ public class PlayerControls : MonoBehaviour
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
-        }
+        //}
     }
 
     private bool IsGrounded(){
@@ -211,6 +211,7 @@ public class PlayerControls : MonoBehaviour
     }
 
     //Detects if we have just colided with a wall, sets horizontal velocity to 0 if so
+    //Currently not being used at all. The issue this code was focused on is fixed with 
     private void HorizontalColChecker() {
         
         //Debug.Log("Checking for horizontal collisions");

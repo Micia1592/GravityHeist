@@ -28,22 +28,11 @@ public class ObjectGrabber : MonoBehaviour
 
     void Update()
     {
-        //Check to see if we are too far from grabbed object. Release if so
-        
-        if (grabbing&&Vector2.Distance(GrabLocation.position, grabbedObject.transform.position)>GrabRange){
-            Debug.Log("Grab releasd as object out of range");
-            Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
-            grabbedObjectRgb2D.isKinematic = false;
-            grabbing=false;
-            grabbedObject = null;
-            grabbedObjectRgb2D = null;
-            
-        }
         
         //Draw line showing the grab range
         //DrawDebugLine();
         //Pressing the grab button
-        if (Input.GetKeyUp(KeyCode.LeftControl)){
+        if (Input.GetKeyUp(KeyCode.C)){
 
             Debug.Log("Grab button pressed");
 
@@ -51,6 +40,7 @@ public class ObjectGrabber : MonoBehaviour
 
             if(!grabbing){
                 RaycastHit2D toGrab;
+                //Decide on grab direction based on gravity state
                 if (playerGravObject.GetGravityState()){
                     toGrab = Physics2D.Raycast(transform.position, Vector2.left*transform.localScale.x, GrabRange, grabLayer);
                 }
@@ -60,51 +50,32 @@ public class ObjectGrabber : MonoBehaviour
                 
                 if (toGrab.transform !=null){
                     Debug.Log("Grabbable object hit");
-                    grabbing = true;
-                    grabbedObject = toGrab.transform.gameObject;
-                    grabbedObjectRgb2D = grabbedObject.GetComponent<Rigidbody2D>();
-                    grabbedObjectRgb2D.isKinematic = true;
-                    //Remove collision on grabbed object
-                    Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), true);
+                    GrabObject(toGrab.transform.gameObject);
                 }
             }
             //Logic to release grabbed object on second key press
             else{
-                Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>(), false);
-                grabbedObjectRgb2D.isKinematic = false;
-                grabbing=false;
-                grabbedObject = null;
-                grabbedObjectRgb2D = null;
+                ReleaseGrab();
             }
         }
+    }
 
-        if (grabbing){
-            PullObject();
+    void ReleaseGrab(){
+        grabbing=false;
+        grabbedObject.GetComponent<FixedJoint2D>().connectedBody = null;
+        grabbedObject.GetComponent<FixedJoint2D>().enabled=false;
+        grabbedObject = null;
+        grabbedObjectRgb2D = null;
+    }
+
+    void GrabObject(GameObject toGrab){
+        if (toGrab.GetComponent<FixedJoint2D>() != null){
+            grabbing = true;
+            toGrab.GetComponent<FixedJoint2D>().enabled = true;
+            toGrab.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+            grabbedObject = toGrab;
         }
     }
-
-    void PullObject(){
-
-        //Only pull the object if it isnt too close
-       // if (Mathf.Abs(GrabLocation.position.x - grabbedObject.transform.position.x)>GrabMinDist){
-           // grabbedObjectRgb2D.AddForce((GrabLocation.position - grabbedObject.transform.position)*(GrabForce));
-        //}
-        //Otherwise, just set its x position (not setting y to avoid pushing it into the floor)
-        //else{
-            grabbedObject.transform.position = new Vector2(GrabLocation.transform.position.x, grabbedObject.transform.position.y);
-        //}
-
-    }
-
-    //Remove collision if you colide with the block you're grabbing
-    /*
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject == grabbedObject){
-            Physics2D.IgnoreCollision(grabbedObject.GetComponent<Collider2D>(), this.gameObject.GetComponent<Collider2D>());
-        }
-    }
-    */
-
 
     void OnDrawGizmosSelected()
     {
