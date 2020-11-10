@@ -20,6 +20,7 @@ public class MusicManager : MonoBehaviour
         if (scene > 3 && scene < 6)
         {
             //switch music
+            //maybe do every couple of levels
         }
 
     }
