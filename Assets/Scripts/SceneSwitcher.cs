@@ -7,10 +7,12 @@ public class SceneSwitcher : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime;
+
+
     public void SceneChange()
     {
         
-      StartCoroutine(( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1))); //next level
+      StartCoroutine((LoadLevel(SceneManager.GetActiveScene().buildIndex + 1))); //next level
        
     }
 

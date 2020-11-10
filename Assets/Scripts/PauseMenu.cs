@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PauseMenu : MonoBehaviour
 {
 
+    public Animator transition;
 
     private bool isPaused;
     public Canvas pauseCanvas;
@@ -43,6 +46,16 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
+        pauseCanvas.enabled = false;
+    }
+
+
+    public void RestartLevel()
+    {
+
+        Time.timeScale = 1;
+        transition.SetTrigger("Start");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         pauseCanvas.enabled = false;
     }
 }
