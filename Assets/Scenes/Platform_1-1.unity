@@ -3058,7 +3058,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SceneSwitcher
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1994814157}
     - target: {fileID: 6077225653184282875, guid: 6c821c1778b865c47a5dab48fe7041e1,
         type: 3}
       propertyPath: m_Name
@@ -4285,6 +4285,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994814157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4443344282232286627, guid: 9b4e5c7ce90af304c9e19d5b4035ac56,
+    type: 3}
+  m_PrefabInstance: {fileID: 311833570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3409062061145517987
 PrefabInstance:
   m_ObjectHideFlags: 0
