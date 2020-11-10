@@ -80,16 +80,16 @@ public class PlayerControls : MonoBehaviour
         if (IsGrounded()){
             r2d.velocity = new Vector2(Input.GetAxis("Horizontal") * maxSpeed, r2d.velocity.y);
         }
-        //Else if we arent grounded, add force in the desired direction
+        //Else if we arent grounded, add aircontrol force in desired direction
         else{
             r2d.AddForce(new Vector2(Input.GetAxis("Horizontal")*airControlStrength, 0));
         }
-        //Limit horizontal speed to max speed
+        //Cap horizontal speed to max speed
         if(Mathf.Abs(r2d.velocity.x)>maxSpeed){
             r2d.velocity = new Vector2((maxSpeed*Mathf.Sign(r2d.velocity.x)), r2d.velocity.y);
         }
 
-        //Add jump force if needed
+        //Add jump force if jump has been triggered
         if (jumping){
             //Jump goes negative if gravity on player is reversed
             if (gravityObject.GetGravityState()){
@@ -136,10 +136,7 @@ public class PlayerControls : MonoBehaviour
         //Rotate if players gravity has switched and update local gravity state
         if (currGravityState!=gravityObject.GetGravityState()){
             transform.Rotate(Vector3.forward * 180);
-            //Added flip if velocity is greater than 0, to correct facing after inversion
-            if (Mathf.Abs(r2d.velocity.x)>0){
-                Flip();
-            }
+            Flip();
             currGravityState = gravityObject.GetGravityState();
         }
         //Update facing, but only if velocity is greater than 0 (standing still should change nothing)

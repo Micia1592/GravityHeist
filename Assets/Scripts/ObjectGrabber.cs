@@ -8,7 +8,7 @@ public class ObjectGrabber : MonoBehaviour
     public bool grabbing = false;
 
     [SerializeField] private LayerMask grabLayer;
-    [SerializeField] private float GrabRange = 1f;
+    [SerializeField] private float GrabRange = 0.5f;
     private float GrabMinDist = 0.1f;
 
     [SerializeField] private float GrabForce = 10f;
@@ -16,6 +16,9 @@ public class ObjectGrabber : MonoBehaviour
     [SerializeField] private Transform GrabLocation;
 
     private GravityObject playerGravObject;
+
+    [SerializeField] private float grabTorqueLimit = 5f;
+    [SerializeField] private float grabForceLimit = 5f;
 
     private GameObject grabbedObject;
     private Rigidbody2D grabbedObjectRgb2D;
@@ -58,6 +61,9 @@ public class ObjectGrabber : MonoBehaviour
                 ReleaseGrab();
             }
         }
+
+        //Check current forces and stop the grab if forces are too high
+        //CheckForce();
     }
 
     void ReleaseGrab(){
@@ -76,6 +82,27 @@ public class ObjectGrabber : MonoBehaviour
             grabbedObject = toGrab;
         }
     }
+
+    void CheckForce(){
+        if (grabbing){
+            
+            //Get the current forces on the joint
+            float currForce = grabbedObject.GetComponent<FixedJoint2D>().reactionForce.magnitude;
+            float currTorque = grabbedObject.GetComponent<FixedJoint2D>().reactionTorque;
+            //Release the grab if the forces are too high
+            if ((grabbedObject.GetComponent<FixedJoint2D>().reactionTorque>grabTorqueLimit)){
+                Debug.Log("Torque too high, releasing grab");
+                ReleaseGrab();
+            }
+            else if ((currForce>grabForceLimit)){
+                Debug.Log("Force too high, releasing grab");
+                ReleaseGrab();
+
+            }
+        }
+    }
+
+
 
     void OnDrawGizmosSelected()
     {
