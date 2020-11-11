@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 5000276882766065244}
   - component: {fileID: 5000276882766065223}
   - component: {fileID: 7576718451433979652}
+  - component: {fileID: 4677405223199544645}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -260,3 +261,22 @@ MonoBehaviour:
   grabForceLimit: 5
   grabEffect: {fileID: 1113046467830523238, guid: 296d8ed3fa4e7db42999ec41f71cb948,
     type: 3}
+--- !u!95 &4677405223199544645
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000276882766065221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b10e851ca682a0341a3558a440d90bcf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
