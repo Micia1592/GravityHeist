@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5000276882546899533}
   m_Layer: 8
   m_Name: Gravgun
-  m_TagString: Untagged
+  m_TagString: GravGun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

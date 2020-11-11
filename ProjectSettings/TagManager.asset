@@ -11,6 +11,7 @@ TagManager:
   - CheckPoint
   - Spinnable
   - Wheel
+  - GravGun
   layers:
   - Default
   - TransparentFX
