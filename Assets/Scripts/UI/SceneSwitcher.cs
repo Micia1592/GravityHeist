@@ -24,9 +24,11 @@ public class SceneSwitcher : MonoBehaviour
 
       //Store the gravgun, and whether it should be active on level load
       gravgun = GameObject.FindGameObjectWithTag("GravGun");
-      if (gravgun.activeSelf==true){
-        gravgunLevel = true;
-        gravgun.SetActive(false);
+      if (gravgun!=null){
+        if (gravgun.activeSelf==true){
+          gravgunLevel = true;
+          gravgun.SetActive(false);
+        }
       }
     }
 
