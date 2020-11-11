@@ -1,28 +1,13 @@
 fileFormatVersion: 2
-guid: 9da033a665d956d46b83c5bb6df91fdc
+guid: 8d00f04e783673742b781c42fde21ad6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6923051170901069527
-    second: hit and death_0
+      213: 4281637774074219296
+    second: jump_0
   - first:
-      213: -5163849798170446253
-    second: hit and death_1
-  - first:
-      213: -4702262813856405974
-    second: hit and death_2
-  - first:
-      213: -1955315685029310632
-    second: hit and death_3
-  - first:
-      213: 7905818724210880750
-    second: hit and death_4
-  - first:
-      213: 2456808678779168818
-    second: hit and death_5
-  - first:
-      213: 8694673611960259904
-    second: hit and death_6
+      213: -7862396843884538191
+    second: jump_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hit and death_0
+      name: jump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 186
+        y: 32
         width: 90
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,125 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 921f694d3a16cef90800000000000000
-      internalID: -6923051170901069527
+      spriteID: 02b8694dede6b6b30800000000000000
+      internalID: 4281637774074219296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hit and death_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 155
-        width: 90
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 356f392c7f15658b0800000000000000
-      internalID: -5163849798170446253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hit and death_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 124
-        width: 90
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a266f8b62e43ebeb0800000000000000
-      internalID: -4702262813856405974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hit and death_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 93
-        width: 90
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f04128eb25dd4e0800000000000000
-      internalID: -1955315685029310632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hit and death_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 62
-        width: 90
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee0b83b2e3c17bd60800000000000000
-      internalID: 7905818724210880750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hit and death_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 31
-        width: 90
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 238aab30a76581220800000000000000
-      internalID: 2456808678779168818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hit and death_6
+      name: jump_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 90
-        height: 31
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0459ade659fa9a870800000000000000
-      internalID: 8694673611960259904
+      spriteID: 1b61c1d2ab723e290800000000000000
+      internalID: -7862396843884538191
       vertices: []
       indices: 
       edges: []
