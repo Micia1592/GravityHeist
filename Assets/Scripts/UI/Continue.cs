@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartGame : MonoBehaviour
+public class Continue : MonoBehaviour
 {
     // Start is called before the first frame update
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Setting");
+        SceneManager.LoadScene("Intro_1");
     }
 }
