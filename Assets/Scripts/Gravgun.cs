@@ -54,13 +54,24 @@ public class Gravgun : MonoBehaviour
     }
 
     public void InvertNewObject(GravityObject gravObject){
-        //Drop current object if present
-        if (invertedActive){
+        //Check if object is the same as current object, undo effect if so
+        if (gravObject == currentlyInvertedObject){
             currentlyInvertedObject.SwitchLocalGravity();
+            currentlyInvertedObject = null;
+            invertedActive = false;
         }
-
-        currentlyInvertedObject = gravObject;
-        currentlyInvertedObject.SwitchLocalGravity();
-        invertedActive = true;
+        //Drop current object if present
+        else if (invertedActive){
+            currentlyInvertedObject.SwitchLocalGravity();
+            currentlyInvertedObject = gravObject;
+            currentlyInvertedObject.SwitchLocalGravity();
+            invertedActive = true;
+        }
+        //If nothing currently activated
+        else {
+            currentlyInvertedObject = gravObject;
+            currentlyInvertedObject.SwitchLocalGravity();
+            invertedActive = true;
+        }
     }
 }
