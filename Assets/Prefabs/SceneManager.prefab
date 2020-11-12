@@ -1772,7 +1772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 4443344282668673141}
   pauseCanvas: {fileID: 4443344282852878584}
-  optionsCanvas: {fileID: 0}
+  optionsCanvas: {fileID: 6348192577306264461}
 --- !u!1 &4443344281924975478
 GameObject:
   m_ObjectHideFlags: 0
