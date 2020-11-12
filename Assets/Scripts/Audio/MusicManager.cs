@@ -35,7 +35,7 @@ public class MusicManager : MonoBehaviour
 
         int scene = SceneManager.GetActiveScene().buildIndex;
 
-        if (scene >= 4 && scene <= 6 && onLevel4 == false)
+        if (scene >= 5 && scene <= 8 && onLevel4 == false)
         {
 
             StartCoroutine(mainMenuTo4());
@@ -44,7 +44,7 @@ public class MusicManager : MonoBehaviour
             onLevel4 = true;
         }
 
-        else if (scene <= 7 && scene >= 9 && onLevel7  == false)
+        else if (scene <= 9 && scene >= 11 && onLevel7  == false)
         {
             StartCoroutine(level7to9());
             level7Music.Play();
@@ -55,7 +55,7 @@ public class MusicManager : MonoBehaviour
         private IEnumerator mainMenuTo4()
         {
             var fadePerSec = menuMusic.volume / 2f;
-
+           
             while (menuMusic.volume > 0)
             {
                menuMusic.volume = Mathf.MoveTowards(menuMusic.volume, 0, fadePerSec * Time.deltaTime);
