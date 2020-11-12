@@ -40,6 +40,7 @@ public class MusicManager : MonoBehaviour
 
             StartCoroutine(mainMenuTo4());
             level4Music.Play();
+            level4Music.loop = true;
             onLevel4 = true;
         }
 
@@ -47,6 +48,7 @@ public class MusicManager : MonoBehaviour
         {
             StartCoroutine(level7to9());
             level7Music.Play();
+            level7Music.loop = true;
             onLevel7 = true;
         }
     }
