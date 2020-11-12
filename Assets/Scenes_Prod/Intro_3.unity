@@ -1773,6 +1773,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.7111608
       objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
 --- !u!4 &550609976 stripped
@@ -1869,6 +1874,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
 --- !u!4 &866857588 stripped
@@ -1884,6 +1894,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87253759317572727, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2783091972223575970, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_Name
@@ -2111,6 +2126,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87253759317572727, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2783091972223575970, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_Name
@@ -2399,6 +2419,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87253759317572727, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2783091972223575970, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_Name
@@ -3078,6 +3103,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87253759317572727, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2783091972223575970, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_Name
@@ -4034,6 +4064,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
