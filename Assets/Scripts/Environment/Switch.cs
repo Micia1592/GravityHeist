@@ -5,6 +5,8 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public GameObject switchObj;
+
+    [SerializeField] private GameObject targetKey;
     private AudioSource source;
 
     void Start()
@@ -14,10 +16,10 @@ public class Switch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Switch")
+        if (collision.gameObject == targetKey)
         {
             source.Play();
-            Debug.Log("SWITCH");
+            Debug.Log("Deactivating Lazer Door");
             switchObj.SetActive(false);
         }
         //else 

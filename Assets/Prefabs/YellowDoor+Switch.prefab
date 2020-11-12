@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchObj: {fileID: 5795055443550986694}
+  targetKey: {fileID: 2709328415160753858}
 --- !u!212 &5795055443177415878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -677,6 +678,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc31580ce8f4e414e91248a91d0676d5, type: 3}
+--- !u!1 &2709328415160753858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068208420956750799, guid: bc31580ce8f4e414e91248a91d0676d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7191284754510126349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2709328415160750397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5068208420956752944, guid: bc31580ce8f4e414e91248a91d0676d5,

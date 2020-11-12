@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchObj: {fileID: 1491054720857049148}
+  targetKey: {fileID: 7008746368954087224}
 --- !u!212 &1491054720693751100
 SpriteRenderer:
   m_ObjectHideFlags: 0
