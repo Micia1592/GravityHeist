@@ -19,6 +19,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private bool gravityFlipAllowed = false;
     float moveDirection = 0;
     Rigidbody2D r2d;
+
+    Animator animator;
     Collider2D mainCollider;
 
     ObjectGrabber grabber;
@@ -48,6 +50,7 @@ public class PlayerControls : MonoBehaviour
         r2d.gravityScale = gravityScale;
         gravityObject = GetComponent<GravityObject>();
         grabber = GetComponent<ObjectGrabber>();
+        animator = GetComponent<Animator>();
 
         respawnPoint = transform.position;
     }
@@ -55,6 +58,13 @@ public class PlayerControls : MonoBehaviour
     
     void Update()
     {
+
+
+        //Update the players animator
+        if (IsGrounded()){
+            animator.SetBool("Jumping", false);
+        }
+        animator.SetFloat("MoveSpeed", Mathf.Abs(r2d.velocity.x));
         
         if (gravityFlipAllowed){
 
@@ -91,6 +101,8 @@ public class PlayerControls : MonoBehaviour
 
         //Add jump force if jump has been triggered
         if (jumping){
+            //Update the animator
+            animator.SetBool("Jumping", true);
             //Jump goes negative if gravity on player is reversed
             if (gravityObject.GetGravityState()){
                 r2d.velocity = new Vector2(r2d.velocity.x, -jumpHeight);
