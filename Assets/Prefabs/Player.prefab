@@ -246,12 +246,12 @@ GameObject:
   - component: {fileID: 5177253985648033}
   - component: {fileID: 4598336185764973238}
   m_Layer: 8
-  m_Name: Gravgun (1)
+  m_Name: Gravgun
   m_TagString: GravGun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &872121105074851423
 Transform:
   m_ObjectHideFlags: 0

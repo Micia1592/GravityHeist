@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class GravGunPickup : MonoBehaviour
 {
+    private GameStateController controller;
 
-    public GameObject gravGun;
+    private void Start() {
+
+        controller = GameObject.FindObjectOfType<GameStateController>();
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -13,12 +19,8 @@ public class GravGunPickup : MonoBehaviour
         {
             //Debug.Log("collided");
 
-            if (gravGun!=null){
-                gravGun.SetActive(true);
-            }
-            else{
-                Debug.Log("GravGunPickup - Unable to find grav gun to activate it");
-            }
+            controller.EquipGravGun(true);
+            
             Destroy(gameObject);
         }
     }
