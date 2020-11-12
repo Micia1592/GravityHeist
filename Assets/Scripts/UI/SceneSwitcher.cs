@@ -16,6 +16,8 @@ public class SceneSwitcher : MonoBehaviour
     private GameObject gravgun;
     private bool gravgunLevel = false;
 
+    
+
     private void Start() {
       //Deactivate player controls while level is loading
       GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -30,6 +32,7 @@ public class SceneSwitcher : MonoBehaviour
           gravgun.SetActive(false);
         }
       }
+      
     }
 
     public void SceneChange()
@@ -42,6 +45,7 @@ public class SceneSwitcher : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
+     
 
         yield return new WaitForSeconds(transitionTime);
 

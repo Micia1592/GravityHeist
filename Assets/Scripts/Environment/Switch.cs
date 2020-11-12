@@ -5,10 +5,18 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public GameObject switchObj;
+    private AudioSource source;
+
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Switch")
         {
+            source.Play();
             Debug.Log("SWITCH");
             switchObj.SetActive(false);
         }
@@ -25,20 +33,11 @@ public class Switch : MonoBehaviour
     {
         if (collision.tag == "Switch")
         {
+            source.Play();
             Debug.Log("SWITCH");
             switchObj.SetActive(true);
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
