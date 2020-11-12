@@ -33,10 +33,9 @@ public class Switch : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Switch")
+        if (collision.gameObject == targetKey)
         {
             source.Play();
-            Debug.Log("SWITCH");
             switchObj.SetActive(true);
         }
     }
