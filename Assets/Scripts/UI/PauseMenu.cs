@@ -11,11 +11,13 @@ public class PauseMenu : MonoBehaviour
 
     private bool isPaused;
     public Canvas pauseCanvas;
+    public Canvas optionsCanvas;
 
     void Start()
     {
         isPaused = false;
         pauseCanvas.enabled = false;
+        optionsCanvas.enabled = false;
     }
 
     void Update()
@@ -57,6 +59,20 @@ public class PauseMenu : MonoBehaviour
         transition.SetTrigger("Start");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         pauseCanvas.enabled = false;
+    }
+
+    public void Options()
+    {
+        pauseCanvas.enabled = false;
+        optionsCanvas.enabled = true;
+
+    }
+
+
+    public void BackButton()
+    {
+        optionsCanvas.enabled = false;
+        pauseCanvas.enabled = true;
     }
 }
     

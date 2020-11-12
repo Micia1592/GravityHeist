@@ -14,7 +14,7 @@ public class FallingPlatforms : MonoBehaviour
     void Update()
     {
        yPos = this.transform.position.y;
-       yPos = Mathf.Clamp(yPos, -1, 1);
+       yPos = Mathf.Clamp(yPos, -1, 1); //contrain to these values
        source.pitch = yPos;
     }
 }
