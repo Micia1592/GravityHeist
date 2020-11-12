@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SetVolume : MonoBehaviour
 {
 
     public AudioMixer mixer;
+    
 
+    private void Start()
+    {
+        //mixer.value = PlayerPrefs.GetFloat("VolumeMasterParam", 0.75f);
+
+    }
     public void SetLevelMaster(float sliderValue)
     {
         mixer.SetFloat("VolumeMasterParam", Mathf.Log10(sliderValue) * 20);

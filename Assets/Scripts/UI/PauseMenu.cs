@@ -32,13 +32,13 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 0;
                 
 
-                //  showPaused();
+                
             }
             else if (Time.timeScale == 0)
             {
                 pauseCanvas.enabled = false;
                 Time.timeScale = 1;
-                // hidePaused();
+               
             }
         }
 
@@ -57,8 +57,10 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1;
         transition.SetTrigger("Start");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         pauseCanvas.enabled = false;
+        optionsCanvas.enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void Options()
