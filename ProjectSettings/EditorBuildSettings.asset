@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes_Prod/GravButton_4.unity
     guid: 099efeb94906ea946aad6a25162e1fc2
   - enabled: 1
-    path: Assets/Scenes_Prod/GravGun_1.unity
+    path: Assets/Scenes_Prod/GravGun_1.5.unity
     guid: 02773d46f14e9044ba8fdc1984f4ad3a
   - enabled: 1
     path: Assets/Scenes_Prod/GravGun_2.unity
