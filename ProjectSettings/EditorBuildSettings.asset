@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes_Prod/GravButton_4.unity
     guid: 099efeb94906ea946aad6a25162e1fc2
   - enabled: 1
+    path: Assets/Scenes_Prod/GravGun_1_Vault.unity
+    guid: 5ee81e618bb23d84097612b2b369edc8
+  - enabled: 1
     path: Assets/Scenes_Prod/GravGun_1.5.unity
     guid: 02773d46f14e9044ba8fdc1984f4ad3a
   - enabled: 1
@@ -53,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes_Prod/GravGun_4.unity
     guid: 5dbab7c4d84075b429d4b411672ed24f
+  - enabled: 1
+    path: Assets/Scenes_Prod/End_1.unity
+    guid: eda188e494320b741a029325b8c30555
+  - enabled: 1
+    path: Assets/Scenes_Prod/End-2.unity
+    guid: 8c8ffc886814d274fa88c922927208cc
   m_configObjects: {}
