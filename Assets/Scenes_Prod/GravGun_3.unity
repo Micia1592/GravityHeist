@@ -1603,6 +1603,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9139161487688811280, guid: 123db624e3455ab4db0351db4a8381e2,
+        type: 3}
+      propertyPath: gravityInverted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9139161487688811281, guid: 123db624e3455ab4db0351db4a8381e2,
         type: 3}
       propertyPath: m_LocalPosition.x
