@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuMusic: {fileID: 1705321776}
   level4Music: {fileID: 1705321777}
-  level6Music: {fileID: 1705321778}
+  level7Music: {fileID: 1705321778}
   onLevel4: 0
   onLevel7: 0
 --- !u!4 &1705321775
@@ -1331,8 +1331,9 @@ AudioSource:
   m_GameObject: {fileID: 1705321773}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 00e2fc4cc2ac6e94bbb46071513c7ddc,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0f497c3268dced14fbab43c95a182da7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

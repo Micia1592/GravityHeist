@@ -8,16 +8,26 @@ public class blink : MonoBehaviour
 
     public float interval;
 
+    public AudioSource source;
+  
+
     private void Start()
     {
         InvokeRepeating("blinking", 0, interval);
+        source.Play();
     }
 
     void blinking ()
     {
         if (blinkingObj.activeSelf)
+        {
             blinkingObj.SetActive(false);
+            source.volume = 0.1f;
+        }
         else
+        {
             blinkingObj.SetActive(true);
+            source.volume = 0.2f;
+        }
     }
 }

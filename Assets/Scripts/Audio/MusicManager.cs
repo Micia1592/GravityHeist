@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-
-    private Scene scene;
-
+    
     public  AudioSource menuMusic;
     public  AudioSource level4Music;
-    public AudioSource level6Music;
+    public AudioSource level7Music;
     public bool onLevel4;
     public bool onLevel7; 
 
@@ -27,9 +25,9 @@ public class MusicManager : MonoBehaviour
         level4Music.loop = false;
         level4Music.volume = 0;
 
-        level6Music.loop = false;
-        level6Music.volume = 0;
-        //level4Music.Stop();
+        level7Music.loop = false;
+        level7Music.volume = 0;
+       
     }
 
     private void Update()
@@ -47,9 +45,9 @@ public class MusicManager : MonoBehaviour
 
         else if (scene <= 7 && scene >= 9 && onLevel7  == false)
         {
-            
+            StartCoroutine(level7to9());
+            level7Music.Play();
             onLevel7 = true;
-            //play something else
         }
     }
         private IEnumerator mainMenuTo4()
@@ -60,27 +58,37 @@ public class MusicManager : MonoBehaviour
             {
                menuMusic.volume = Mathf.MoveTowards(menuMusic.volume, 0, fadePerSec * Time.deltaTime);
 
-                // yield says: Interupt the routine here, render this frame
-                // and continue from here in the next frame
-                // In other words: Coroutines are like small temporary Update methods
                 yield return null;
             }
 
         while (level4Music.volume < 1)
         {
             level4Music.volume = Mathf.MoveTowards(level4Music.volume, 1, fadePerSec * Time.deltaTime);
-
-            // yield says: Interupt the routine here, render this frame
-            // and continue from here in the next frame
-            // In other words: Coroutines are like small temporary Update methods
+          
             yield return null;
         }
 
-        // Now the volume is 0
-        //Destroy(menuMusic.gameObject);
-        
         }
 
+    private IEnumerator level7to9()
+    {
+        var fadePerSec = level4Music.volume / 2f;
+
+        while (level4Music.volume > 0)
+        {
+            level4Music.volume = Mathf.MoveTowards(level4Music.volume, 0, fadePerSec * Time.deltaTime);
+
+            yield return null;
+        }
+
+        while (level7Music.volume < 1)
+        {
+            level7Music.volume = Mathf.MoveTowards(level7Music.volume, 1, fadePerSec * Time.deltaTime);
+
+            yield return null;
+        }
 
     }
+
+}
 
