@@ -12,6 +12,8 @@ public class Gravgun : MonoBehaviour
 
     private GravityObject currentlyInvertedObject;
     private bool invertedActive = false;
+
+    private bool readyToFire = true;
     
 
     private void Awake()
@@ -34,7 +36,8 @@ public class Gravgun : MonoBehaviour
         this.transform.right = direction; 
 
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        //Projectile firing
+        if (Input.GetKeyUp(KeyCode.Mouse0)&&readyToFire)
         {
 
             //add audiosource here and/or animation
@@ -43,6 +46,8 @@ public class Gravgun : MonoBehaviour
             Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
             projectileInstance.velocity = new Vector2(this.transform.right.x * speed, this.transform.right.y* speed);
             projectileInstance.GetComponent<Projectile>().SetParentGun(this.GetComponent<Gravgun>());
+            //Deny further firing until the first projectile has hit something
+            readyToFire = false;
         }
 
         //Drop object on right click
@@ -73,5 +78,9 @@ public class Gravgun : MonoBehaviour
             currentlyInvertedObject.SwitchLocalGravity();
             invertedActive = true;
         }
+    }
+
+    public void SetReadyToFire(){
+        readyToFire = true;
     }
 }

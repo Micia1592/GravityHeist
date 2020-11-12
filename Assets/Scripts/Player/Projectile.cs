@@ -23,23 +23,21 @@ public class Projectile : MonoBehaviour
         {
             Debug.Log("New object hit by grav gun");
             parentGravgun.InvertNewObject(collision.gameObject.GetComponent<GravityObject>());
-            //collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
 
-            //GetComponent<Rigidbody2D>().gravityScale *= -1;
-            //transform.Rotate(Vector3.forward * 180);
-            //gravityInverted = !gravityInverted;
-            //Debug.Log("projectile Collided");
+            parentGravgun.SetReadyToFire();
+
 
             Destroy(gameObject);
         }
         else if(collision.tag == "Solid")
         {
+            parentGravgun.SetReadyToFire();
             Destroy(gameObject);
         }
         else if (collision.tag == "Switch")
         {
-            //collision.gameObject.GetComponent<GravityObject>().SwitchLocalGravity();
             parentGravgun.InvertNewObject(collision.gameObject.GetComponent<GravityObject>());
+            parentGravgun.SetReadyToFire();
             Destroy(gameObject);
         }
         else if (collision.tag == "Spinnable")
@@ -47,6 +45,7 @@ public class Projectile : MonoBehaviour
 
             Debug.Log("spinnable");
             collision.gameObject.GetComponent<SpinCupOnCollision>().canRotate = true;
+            parentGravgun.SetReadyToFire();
             Destroy(gameObject); 
 
         }
@@ -56,6 +55,7 @@ public class Projectile : MonoBehaviour
 
             Debug.Log("Wheel");
             collision.gameObject.GetComponent<WheelSpin>().noGrav = !collision.gameObject.GetComponent<WheelSpin>().noGrav;
+            parentGravgun.SetReadyToFire();
             Destroy(gameObject);
 
         }
