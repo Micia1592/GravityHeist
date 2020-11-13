@@ -15,7 +15,9 @@ public class PlayerControls : MonoBehaviour
     public float noInputBreakForce = 0.1f;
     public LayerMask groundCheckLayer;
     public float groundCheckRange = 0.1f;
-    private AudioSource footstep;
+    public AudioSource footstep;
+    public AudioSource jumpSound;
+    public AudioSource colPlayer;
 
     [SerializeField] private bool gravityFlipAllowed = false;
     float moveDirection = 0;
@@ -52,7 +54,7 @@ public class PlayerControls : MonoBehaviour
         gravityObject = GetComponent<GravityObject>();
         grabber = GetComponent<ObjectGrabber>();
         animator = GetComponent<Animator>();
-        footstep = GetComponent<AudioSource>();
+        
 
         respawnPoint = transform.position;
     }
@@ -86,6 +88,7 @@ public class PlayerControls : MonoBehaviour
         {
             jumping = true;
             standingOn = null;
+            //start jumping
         }
         // Apply movement velocity
         //Apply full speed in desired direction if grounded
@@ -255,22 +258,28 @@ public class PlayerControls : MonoBehaviour
         {
             respawnPoint = collision.transform.position;
         }
+
+        if (collision.tag == "Solid")
+        {
+            colPlayer.Play();
+        }
     }
 
    public void FootStep()
     {
 
-        if (jumping == false)
+        if (IsGrounded())
         {
             footstep.pitch = Random.Range(0.8f, 1.2f);
             footstep.Play();
         }
-        else if (jumping == true)
+
+        else 
         {
+            jumpSound.Play();
             footstep.Stop();
+            
         }
-            
-            
-          
+
     }
 }
