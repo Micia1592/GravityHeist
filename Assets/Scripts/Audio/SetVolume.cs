@@ -16,7 +16,7 @@ public class SetVolume : MonoBehaviour
     private void Start()
     {
         masterSlider.value = PlayerPrefs.GetFloat("VolumeMasterParam", 0.75f);
-        musicSlider.value = PlayerPrefs.GetFloat("VolumeMusicParam", 0.75f);
+        musicSlider.value = PlayerPrefs.GetFloat("VolumeMusicParam", 0.5f);
         sfxSlider.value = PlayerPrefs.GetFloat("VolumeSFXParam", 0.75f);
 
     }

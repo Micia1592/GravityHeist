@@ -7,26 +7,32 @@ public class MusicManager : MonoBehaviour
 {
     
     public  AudioSource menuMusic;
-    public  AudioSource level4Music;
-    public AudioSource level7Music;
-    public bool onLevel4;
-    public bool onLevel7; 
+    public  AudioSource level6Music;
+    public AudioSource level11Music;
+    public AudioSource finalMusic;
+    public bool onMainMenu;
+    public bool onLevel6;
+    public bool onLevel11;
+    public bool onFinalLevels;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-        onLevel4 = false;
-        onLevel7 = false;
+        onLevel6 = false;
+        onLevel11 = false;
+        onFinalLevels = false;
 
-        menuMusic.loop = true;
-        menuMusic.volume = 1;
-        menuMusic.Play();
 
-        level4Music.loop = false;
-        level4Music.volume = 0;
+       
 
-        level7Music.loop = false;
-        level7Music.volume = 0;
+        level6Music.loop = false;
+        level6Music.volume = 0;
+
+        level11Music.loop = false;
+        level11Music.volume = 0;
+
+        finalMusic.loop = false;
+        finalMusic.volume = 0;
        
     }
 
@@ -35,24 +41,55 @@ public class MusicManager : MonoBehaviour
 
         int scene = SceneManager.GetActiveScene().buildIndex;
 
-        if (scene >= 5 && scene <= 8 && onLevel4 == false)
+        if(scene == 1 && onMainMenu == false) //reset when player returns to menu
         {
+            onMainMenu = true;
+            menuMusic.loop = true;
+            menuMusic.volume = 1;
+            menuMusic.Play();
 
-            StartCoroutine(mainMenuTo4());
-            level4Music.Play();
-            level4Music.loop = true;
-            onLevel4 = true;
+            level6Music.Stop();
+            level11Music.Stop();
+            finalMusic.Stop();
+
+            onLevel11 = false;
+            onLevel6 = false;
+            onFinalLevels = false;
         }
 
-        else if (scene <= 9 && scene >= 11 && onLevel7  == false)
+
+        else if (scene == 6 &&  onLevel6 == false)
         {
-            StartCoroutine(level7to9());
-            level7Music.Play();
-            level7Music.loop = true;
-            onLevel7 = true;
+
+            StartCoroutine(mainMenuTo6());
+            level6Music.Play();
+            level6Music.loop = true;
+            onLevel6 = true;
+            onMainMenu = false;
+        }
+        
+        else if (scene == 11 && onLevel11  == false)
+        {
+           
+            StartCoroutine(level11to15());
+            level11Music.Play();
+            level11Music.loop = true;
+            onLevel11 = true;
+            onLevel6 = false;
+           
+        }
+        
+        else if (scene == 16 && onFinalLevels == false)
+        {
+            StartCoroutine(level16toFinal());
+            finalMusic.Play();
+            finalMusic.loop = true;
+            onFinalLevels = true;
+            onLevel11 = false;
+           
         }
     }
-        private IEnumerator mainMenuTo4()
+        private IEnumerator mainMenuTo6()
         {
             var fadePerSec = menuMusic.volume / 2f;
            
@@ -63,29 +100,49 @@ public class MusicManager : MonoBehaviour
                 yield return null;
             }
 
-        while (level4Music.volume < 1)
+        while (level6Music.volume < 1)
         {
-            level4Music.volume = Mathf.MoveTowards(level4Music.volume, 1, fadePerSec * Time.deltaTime);
+            level6Music.volume = Mathf.MoveTowards(level6Music.volume, 1, fadePerSec * Time.deltaTime);
           
             yield return null;
         }
 
         }
 
-    private IEnumerator level7to9()
+    private IEnumerator level11to15()
     {
-        var fadePerSec = level4Music.volume / 2f;
-
-        while (level4Music.volume > 0)
+        var fadePerSec = level6Music.volume / 2f;
+        
+        while (level6Music.volume > 0)
         {
-            level4Music.volume = Mathf.MoveTowards(level4Music.volume, 0, fadePerSec * Time.deltaTime);
+            level6Music.volume = Mathf.MoveTowards(level6Music.volume, 0, fadePerSec * Time.deltaTime);
 
             yield return null;
         }
 
-        while (level7Music.volume < 1)
+        while (level11Music.volume < 1)
         {
-            level7Music.volume = Mathf.MoveTowards(level7Music.volume, 1, fadePerSec * Time.deltaTime);
+            level11Music.volume = Mathf.MoveTowards(level11Music.volume, 1, fadePerSec * Time.deltaTime);
+
+            yield return null;
+        }
+
+    }
+
+    private IEnumerator level16toFinal()
+    {
+        var fadePerSec = level6Music.volume / 2f;
+
+        while (level6Music.volume > 0)
+        {
+            level6Music.volume = Mathf.MoveTowards(level6Music.volume, 0, fadePerSec * Time.deltaTime);
+
+            yield return null;
+        }
+
+        while (finalMusic.volume < 1)
+        {
+            finalMusic.volume = Mathf.MoveTowards(finalMusic.volume, 1, fadePerSec * Time.deltaTime);
 
             yield return null;
         }

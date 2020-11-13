@@ -11,6 +11,7 @@ public class returntomenu : MonoBehaviour
     // Update is called once per frame
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 }
