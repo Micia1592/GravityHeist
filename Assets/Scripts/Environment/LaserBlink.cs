@@ -40,8 +40,9 @@ public class LaserBlink : MonoBehaviour
         initialScale = laserWall.transform.localScale;
 
         //Rough calculations for how much the x scaling should increase every 0.1 seconds
-        //Hackily reduced to a third
-        xScaleIncreaseIncrement = Mathf.Round( initialScale.x / ((halfCycle-warningInterval)/0.1f))/3f;
+        xScaleIncreaseIncrement =  initialScale.x / ((halfCycle-warningInterval)/0.01f);
+
+        //Debug.Log("XScale increment: " + xScaleIncreaseIncrement);
 
         laserCollider = laserWall.GetComponent<BoxCollider2D>();
         laserRenderer = laserWall.GetComponent<SpriteRenderer>();
@@ -59,7 +60,7 @@ public class LaserBlink : MonoBehaviour
 
         //For when cycle is completed and we need to restart the cycle
         if(timeCounter>fullCycleInterval){
-            Debug.Log("Deactivating DeathWall, cycle complete");
+            //Debug.Log("Deactivating DeathWall, cycle complete");
             laserCollider.enabled = false;
             laserRenderer.enabled = false;
             deathWallActive=false;
@@ -69,18 +70,17 @@ public class LaserBlink : MonoBehaviour
         }
         //For when we are need to turn the lazer on
         else if (timeCounter>halfCycle&&!deathWallActive){
-            Debug.Log("Reactivating DeathWall");
+            //Debug.Log("Reactivating DeathWall");
             deathWallActive = true;
             warningActive = false;
             setNewXScale(4.2454f);
             setLaserAlpha(1);
             laserCollider.enabled=true;
-            
 
         }
         //For when we need to activate the warning
         else if(timeCounter<halfCycle&&timeCounter>warningInterval&&!warningActive){
-            Debug.Log("Warning activated. DeathWall activating soon");
+            //Debug.Log("Warning activated. DeathWall activating soon");
             warningActive = true;
             laserRenderer.enabled = true;
             setNewXScale(0.5f);
@@ -89,7 +89,7 @@ public class LaserBlink : MonoBehaviour
         }
 
         //For when the warning is active, and its been more than 0.1 seconds since the last increase, increase the alpha of the laser
-        if(warningActive&&(timeCounter-previousIncreaseTime)>0.1f){
+        if(warningActive&&(timeCounter-previousIncreaseTime)>0.01f){
             increaseScaleIncrement();
             previousIncreaseTime = timeCounter;
         }
