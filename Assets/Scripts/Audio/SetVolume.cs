@@ -8,25 +8,36 @@ public class SetVolume : MonoBehaviour
 {
 
     public AudioMixer mixer;
+    public Slider masterSlider;
+    public Slider musicSlider;
+    public Slider sfxSlider;
     
 
     private void Start()
     {
-        //mixer.value = PlayerPrefs.GetFloat("VolumeMasterParam", 0.75f);
+        masterSlider.value = PlayerPrefs.GetFloat("VolumeMasterParam", 0.75f);
+        musicSlider.value = PlayerPrefs.GetFloat("VolumeMusicParam", 0.75f);
+        sfxSlider.value = PlayerPrefs.GetFloat("VolumeSFXParam", 0.75f);
 
     }
     public void SetLevelMaster(float sliderValue)
     {
-        mixer.SetFloat("VolumeMasterParam", Mathf.Log10(sliderValue) * 20);
+        float masterValue = masterSlider.value;
+        mixer.SetFloat("VolumeMasterParam", Mathf.Log10(masterValue) * 20);
+        PlayerPrefs.SetFloat("VolumeMasterParam", masterValue);
     }
 
     public void SetLevelMusic(float sliderValue)
     {
-        mixer.SetFloat("VolumeMusicParam", Mathf.Log10(sliderValue) * 20);
+        float musicValue = musicSlider.value;
+        mixer.SetFloat("VolumeMusicParam", Mathf.Log10(musicValue) * 20);
+        PlayerPrefs.SetFloat("VolumeMuicParam", musicValue);
     }
 
     public void SetLevelSFX(float sliderValue)
     {
+        float sfxValue = sfxSlider.value;
         mixer.SetFloat("VolumeSFXParam", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("VolumeSFXParam", sfxValue);
     }
 }

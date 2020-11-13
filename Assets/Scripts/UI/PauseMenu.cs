@@ -37,6 +37,7 @@ public class PauseMenu : MonoBehaviour
             else if (Time.timeScale == 0)
             {
                 pauseCanvas.enabled = false;
+                optionsCanvas.enabled = false;
                 Time.timeScale = 1;
                
             }
@@ -75,6 +76,14 @@ public class PauseMenu : MonoBehaviour
     {
         optionsCanvas.enabled = false;
         pauseCanvas.enabled = true;
+    }
+
+    public void SkipLevel()
+    {
+        pauseCanvas.enabled = false;
+        optionsCanvas.enabled = false;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
     
