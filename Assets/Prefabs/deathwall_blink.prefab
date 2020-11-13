@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1602988484281188938}
   - component: {fileID: 1602988484281188937}
   m_Layer: 0
-  m_Name: Deathwall 1
+  m_Name: Deathwall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 4.2454, y: 4.2454, z: 4.2454}
   m_Children: []
   m_Father: {fileID: 1602988484557114485}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1602988484281188939
 BoxCollider2D:
@@ -133,8 +133,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602988484509677761}
-  - component: {fileID: 1602988484509677762}
   - component: {fileID: 8889336763376509312}
+  - component: {fileID: 5424248763745855620}
   m_Layer: 0
   m_Name: Blinking
   m_TagString: Untagged
@@ -156,21 +156,6 @@ Transform:
   m_Father: {fileID: 1602988484557114485}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1602988484509677762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602988484509677760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 970de07a9c1fea74b90ee99163467d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blinkingObj: {fileID: 1602988484281188951}
-  interval: 1
-  source: {fileID: 8889336763376509312}
 --- !u!82 &8889336763376509312
 AudioSource:
   m_ObjectHideFlags: 0
@@ -268,6 +253,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5424248763745855620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602988484509677760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57cbad8fdd9438e49b6a8626354eea1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserWall: {fileID: 1602988484281188951}
+  fullCycleInterval: 4
+  source: {fileID: 8889336763376509312}
 --- !u!1 &1602988484557114484
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,8 +296,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 1602988484509677761}
-  - {fileID: 1602988484281188936}
   - {fileID: 3197413458492953967}
+  - {fileID: 1602988484281188936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 3197413458492953967}
   - component: {fileID: 3197413458492953964}
   m_Layer: 0
-  m_Name: Deathwall 1 (1)
+  m_Name: DeathwallOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ Transform:
   m_LocalScale: {x: 4.2454, y: 4.2454, z: 4.2454}
   m_Children: []
   m_Father: {fileID: 1602988484557114485}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3197413458492953964
 SpriteRenderer:
@@ -370,7 +370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 576992863
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b98918f4a8613a349ae8c0b8e1480ca3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
