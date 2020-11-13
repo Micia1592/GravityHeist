@@ -14,11 +14,14 @@ public class Gravgun : MonoBehaviour
     private bool invertedActive = false;
 
     private bool readyToFire = true;
+
+    private AudioSource shot;
     
 
     private void Awake()
     {
         playerCtrl = transform.root.GetComponent<PlayerControls>();
+        shot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,7 +43,7 @@ public class Gravgun : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0)&&readyToFire)
         {
 
-            //add audiosource here and/or animation
+            shot.Play();
            
             mouseDirection = mouseDirection - transform.position;
             Rigidbody2D projectileInstance = Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
