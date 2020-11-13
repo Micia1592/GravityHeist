@@ -88,7 +88,6 @@ public class PlayerControls : MonoBehaviour
         {
             jumping = true;
             standingOn = null;
-            //start jumping
         }
         // Apply movement velocity
         //Apply full speed in desired direction if grounded
@@ -108,6 +107,8 @@ public class PlayerControls : MonoBehaviour
         if (jumping){
             //Update the animator
             animator.SetBool("Jumping", true);
+
+            jumpSound.Play();
             //Jump goes negative if gravity on player is reversed
             if (gravityObject.GetGravityState()){
                 r2d.velocity = new Vector2(r2d.velocity.x, -jumpHeight);
@@ -117,22 +118,6 @@ public class PlayerControls : MonoBehaviour
             }
             jumping = false;
         }
-
-        //Add a constant break force if no horizontal movekeys are held and velocity greater than 1
-        /*
-        if (Input.GetAxis("Horizontal")==0&&r2d.velocity.x>noInputBreakForce){
-            Debug.Log("Applying break force");
-            float currXVelocity = Mathf.Abs(r2d.velocity.x);
-            bool xVolPositive = r2d.velocity.x>0;
-            if (xVolPositive){
-                r2d.velocity = new Vector2(currXVelocity-noInputBreakForce, r2d.velocity.y);
-            }
-            else{
-                r2d.velocity = new Vector2(currXVelocity+noInputBreakForce, r2d.velocity.y);
-            }
-            
-        }
-        */
 
         //Update players facing (before factoring movement of object that the player is standing on)
         UpdateOrientation();
@@ -144,8 +129,6 @@ public class PlayerControls : MonoBehaviour
                 r2d.velocity = new Vector2 ( r2d.velocity.x + standingOn.velocity.x, r2d.velocity.y);
             }
         }
-        //Check for horizontal collisions with walls
-        //HorizontalColChecker();
         
     }
 
@@ -223,31 +206,6 @@ public class PlayerControls : MonoBehaviour
         return localIsGrounded;
         
     }
-
-    //Detects if we have just colided with a wall, sets horizontal velocity to 0 if so
-    //Currently not being used at all. The issue this code was focused on is fixed with 
-    private void HorizontalColChecker() {
-        
-        //Debug.Log("Checking for horizontal collisions");
-        //float colDetectRange = Mathf.Abs(r2d.velocity.x);
-        float colDetectRange = 0.23f;
-        RaycastHit2D wall;
-        if (gravityObject.GetGravityState()){
-            wall = Physics2D.Raycast(transform.position, new Vector2(transform.position.x - (1*Mathf.Sign(transform.localScale.x)), 0), colDetectRange,groundCheckLayer);
-            Debug.DrawLine(transform.position, new Vector2(transform.position.x - (colDetectRange*Mathf.Sign(transform.localScale.x)), transform.position.y), Color.red);
-        }
-        else{
-            wall = Physics2D.Raycast(transform.position, new Vector2(transform.position.x + (1*Mathf.Sign(transform.localScale.x)), 0), colDetectRange,groundCheckLayer);
-            Debug.DrawLine(transform.position, new Vector2(transform.position.x + (colDetectRange*Mathf.Sign(transform.localScale.x)), transform.position.y), Color.red);
-        }
-
-        if (wall.transform !=null){
-            Debug.Log("We hit a wall, setting x velocity to 0");
-            r2d.velocity = new Vector2(0, r2d.velocity.y);
-        }
-
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
@@ -276,7 +234,7 @@ public class PlayerControls : MonoBehaviour
 
         else 
         {
-            jumpSound.Play();
+            //jumpSound.Play();
             footstep.Stop();
             
         }
