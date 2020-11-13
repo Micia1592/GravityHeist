@@ -58,6 +58,9 @@ TagManager:
   - name: level
     uniqueID: 576992863
     locked: 0
+  - name: wireslayer
+    uniqueID: 4087810503
+    locked: 0
   - name: foreground
     uniqueID: 3982712541
     locked: 0
