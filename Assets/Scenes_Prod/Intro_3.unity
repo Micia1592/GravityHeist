@@ -1610,6 +1610,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
 --- !u!1001 &311833570
@@ -2204,12 +2209,17 @@ PrefabInstance:
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -1.16
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -2.28
+      value: -5.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077023185516525026, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d54f0b0c06e04ebe1a1be08ded32a, type: 3}
@@ -2289,6 +2299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.7111608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
@@ -2436,12 +2451,17 @@ PrefabInstance:
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.53
+      value: 3.06
       objectReference: {fileID: 0}
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -3.71
+      value: -5.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077023185516525026, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d54f0b0c06e04ebe1a1be08ded32a, type: 3}
@@ -3123,12 +3143,17 @@ PrefabInstance:
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -3.64
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 2783091973194464639, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -3.71
+      value: -5.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077023185516525026, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d54f0b0c06e04ebe1a1be08ded32a, type: 3}
@@ -3805,6 +3830,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -3.711161
       objectReference: {fileID: 0}
+    - target: {fileID: 4278294428982641410, guid: 230d3d9f30b652b458dc2aed8b100093,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230d3d9f30b652b458dc2aed8b100093, type: 3}
 --- !u!4 &1676041241 stripped
@@ -3894,6 +3924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077023185516525026, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d54f0b0c06e04ebe1a1be08ded32a, type: 3}
@@ -5650,6 +5685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 6.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077023185516525026, guid: 685d54f0b0c06e04ebe1a1be08ded32a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685d54f0b0c06e04ebe1a1be08ded32a, type: 3}
