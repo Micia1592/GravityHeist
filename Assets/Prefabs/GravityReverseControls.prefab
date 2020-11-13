@@ -147,6 +147,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 3528180142379528469}
   gameStateController: {fileID: 0}
+  gravEffectSprite: {fileID: 7085850656463244287}
+  minBlue: 0.1
+  maxBlue: 0.8
+  colorChangeIncrement: 0.005
 --- !u!82 &3528180142379528469
 AudioSource:
   m_ObjectHideFlags: 0
