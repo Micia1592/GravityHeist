@@ -4867,7 +4867,7 @@ PrefabInstance:
         type: 3}
       propertyPath: grabEffect
       value: 
-      objectReference: {fileID: 1113046467830523238, guid: 296d8ed3fa4e7db42999ec41f71cb948,
+      objectReference: {fileID: 8505723467534101830, guid: d14d1364b939b3b45a91b7dbaea4f72c,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8640b935aa76b444b6e05af715045f5, type: 3}
