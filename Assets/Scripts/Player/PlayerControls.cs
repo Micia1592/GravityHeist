@@ -261,7 +261,16 @@ public class PlayerControls : MonoBehaviour
     {
 
         if (jumping == false)
-        footstep.pitch = Random.Range(0.8f, 1.2f);
-        footstep.Play();
+        {
+            footstep.pitch = Random.Range(0.8f, 1.2f);
+            footstep.Play();
+        }
+        else if (jumping == true)
+        {
+            footstep.Stop();
+        }
+            
+            
+          
     }
 }

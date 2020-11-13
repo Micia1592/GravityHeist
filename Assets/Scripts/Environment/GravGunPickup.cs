@@ -5,11 +5,11 @@ using UnityEngine;
 public class GravGunPickup : MonoBehaviour
 {
     private GameStateController controller;
-
+    private AudioSource smash;
     private void Start() {
 
         controller = GameObject.FindObjectOfType<GameStateController>();
-        
+        smash = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,10 +18,10 @@ public class GravGunPickup : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //Debug.Log("collided");
-
+            smash.Play();
             controller.EquipGravGun(true);
-            
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 1.3f);
         }
     }
 }
