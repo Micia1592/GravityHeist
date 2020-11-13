@@ -23,6 +23,8 @@ public class ObjectGrabber : MonoBehaviour
     [SerializeField] private GameObject grabEffect;
     private GameObject currGravEffect;
 
+    public float gravEffectScaleUpFactor = 5f;
+
     private GameObject grabbedObject;
     private Rigidbody2D grabbedObjectRgb2D;
     // Start is called before the first frame update
@@ -88,6 +90,19 @@ public class ObjectGrabber : MonoBehaviour
             //Add gravity effect as parent of grabbed object and move it to the grabbed objects position
             currGravEffect.transform.parent = grabbedObject.transform;
             currGravEffect.transform.position = grabbedObject.transform.position;
+
+            //Update gravity effects size to match object
+            Rect grabbedObjRect = grabbedObject.transform.GetComponent<SpriteRenderer>().sprite.rect;
+            Rect gravEffectRect = currGravEffect.transform.GetComponent<SpriteRenderer>().sprite.rect;
+            //Debug.Log("grabbed object rect: " + grabbedObjRect);
+            Debug.Log("grabbedObjRect width: " + grabbedObjRect.width + ". gravEffectRect width: " + gravEffectRect.width);
+            float sizeRatio = grabbedObjRect.width/gravEffectRect.width;
+            Debug.Log("Ratio: " + sizeRatio);
+            //Increasing ratio by a flat amount to make it a suitable size
+            sizeRatio*=gravEffectScaleUpFactor;
+
+            Vector2 currLocalScale = currGravEffect.transform.localScale;
+            currGravEffect.transform.localScale = new Vector2(currLocalScale.x * sizeRatio, currLocalScale.y * sizeRatio);
 
         }
     }
