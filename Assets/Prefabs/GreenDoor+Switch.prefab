@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 1491054720857049151}
   - component: {fileID: 1491054720857049150}
   - component: {fileID: 4397004988691956550}
+  - component: {fileID: 8627855581374087235}
   m_Layer: 10
   m_Name: Beam
   m_TagString: Untagged
@@ -496,7 +497,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0010255706, y: 0}
@@ -609,6 +610,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8627855581374087235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491054720857049148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4423a2dc036ed84cad17c7b42376943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  spawn: {fileID: 0}
+  BoxSpawn: {fileID: 0}
 --- !u!1 &7008746368954087224
 GameObject:
   m_ObjectHideFlags: 0
