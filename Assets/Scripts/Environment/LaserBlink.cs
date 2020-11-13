@@ -50,6 +50,7 @@ public class LaserBlink : MonoBehaviour
         laserCollider.enabled = false;
         currentAlpha = 0;
         setLaserAlpha(currentAlpha);
+        source.Play();
 
     }
 
@@ -66,6 +67,7 @@ public class LaserBlink : MonoBehaviour
             deathWallActive=false;
             //currentAlpha = 1;
             //setLaserAlpha(currentAlpha);
+            source.volume = 0.2f;
             timeCounter=0F;
         }
         //For when we are need to turn the lazer on
@@ -75,7 +77,9 @@ public class LaserBlink : MonoBehaviour
             warningActive = false;
             setNewXScale(4.2454f);
             setLaserAlpha(1);
-            laserCollider.enabled=true;
+            laserCollider.enabled = true;
+            source.volume = 0.45f;
+
 
         }
         //For when we need to activate the warning
@@ -86,6 +90,8 @@ public class LaserBlink : MonoBehaviour
             setNewXScale(0.5f);
             setLaserAlpha(255);
             previousIncreaseTime = 0f;
+            source.volume = 0.25f;
+            
         }
 
         //For when the warning is active, and its been more than 0.1 seconds since the last increase, increase the alpha of the laser
