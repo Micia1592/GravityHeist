@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Laser door buttons
+
 public class Switch : MonoBehaviour
 {
     public GameObject switchObj;
@@ -22,14 +24,7 @@ public class Switch : MonoBehaviour
             Debug.Log("Deactivating Lazer Door");
             switchObj.SetActive(false);
         }
-        //else 
-        //{
-        //    switchObj.SetActive(true);
-        //}
-        //if (collision.tag == "Player")
-        //{
-        //    switchObj.SetActive(false);
-        //}
+       
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

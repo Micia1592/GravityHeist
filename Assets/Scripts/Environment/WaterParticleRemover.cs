@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Unused in final game, kept in for our test levels
+//Source:https://www.youtube.com/watch?v=3r6o8CfRlA4&t=165s
+
 public class WaterParticleRemover : MonoBehaviour
 {
     LayerMask waterLayer;

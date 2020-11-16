@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Checkpoint script
+
+
 public class CheckpointController : MonoBehaviour
 {
     public Sprite checkpoint_notreached;

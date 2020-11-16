@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//our pause menu handler. Each void is called when a particlar button is pressed while paused
 
 public class PauseMenu : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class PauseMenu : MonoBehaviour
 
                 
             }
-            else if (Time.timeScale == 0)
+            else if (Time.timeScale == 0) //if the game is already paused, unpause
             {
                 pauseCanvas.enabled = false;
                 optionsCanvas.enabled = false;
@@ -48,7 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1;        //set game playable
         pauseCanvas.enabled = false;
     }
 
@@ -57,17 +58,17 @@ public class PauseMenu : MonoBehaviour
     {
 
         Time.timeScale = 1;
-        transition.SetTrigger("Start");
+        transition.SetTrigger("Start");  //Play our crossfade
         pauseCanvas.enabled = false;
         optionsCanvas.enabled = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //load level again
         
     }
 
     public void Options()
     {
         pauseCanvas.enabled = false;
-        optionsCanvas.enabled = true;
+        optionsCanvas.enabled = true; //launch th options canvas
 
     }
 

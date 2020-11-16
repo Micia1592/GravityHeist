@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Spin a wheel. This is unused in final game
+
 public class WheelSpin : MonoBehaviour
 {
 
@@ -17,29 +19,7 @@ public class WheelSpin : MonoBehaviour
     void Update()
     {
 
-        if (gameStateController.gravityInverted == true && noGrav == true)
-        {
-            transform.Rotate(Vector3.forward * -1);
-        }
-
-        else if (gameStateController.gravityInverted == false && noGrav == false)
-        {
             transform.Rotate(Vector3.forward * 1);
-        }
-
-        else if (gameStateController.gravityInverted == true && noGrav == false)
-        {
-            transform.Rotate(Vector3.forward * 1);
-        }
-
-        else if (gameStateController.gravityInverted == false && noGrav == true)
-        {
-            transform.Rotate(Vector3.forward * -1);
-        }
-
-        else
-        {
-            transform.Rotate(Vector3.forward * 1);
-        }
+        
     }
 }

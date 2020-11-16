@@ -5,13 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class returntomenu : MonoBehaviour
 {
-    // Start is called before the first frame update
    
-
-    // Update is called once per frame
     public void LoadScene(string sceneName)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu"); //go back to the main menu
     }
 }

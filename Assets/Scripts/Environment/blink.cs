@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script blinks an object in and out, e.g. signs
+
 public class blink : MonoBehaviour
 {
     public GameObject blinkingObj;

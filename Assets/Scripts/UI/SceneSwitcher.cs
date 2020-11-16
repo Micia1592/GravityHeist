@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Controls when the player goes to the next level and checks if the playre should have the grav gun
+
 public class SceneSwitcher : MonoBehaviour
 {
     public Animator transition;

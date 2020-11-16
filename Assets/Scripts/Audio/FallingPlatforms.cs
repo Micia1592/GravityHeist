@@ -13,7 +13,7 @@ public class FallingPlatforms : MonoBehaviour
 
     void Update()
     {
-       yPos = this.transform.position.y;
+       yPos = this.transform.position.y; //this will change the pitch dependin on the height of the platform
        yPos = Mathf.Clamp(yPos, -1, 1); //contrain to these values
        source.pitch = yPos;
     }

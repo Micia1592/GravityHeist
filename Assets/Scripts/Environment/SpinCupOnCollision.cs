@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Unused in final game due to time constraints
+
 public class SpinCupOnCollision : MonoBehaviour
 {
-
-    //public Transform objTransform;
-    // public GameObject projectile;
-
  
     public bool canRotate;
    

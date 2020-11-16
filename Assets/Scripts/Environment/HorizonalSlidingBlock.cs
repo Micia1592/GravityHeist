@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Sliding blocks the player can jump on
+
 public class HorizonalSlidingBlock : MonoBehaviour
 {
 

@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Detect what the grav gun has hit and do different things
         if(collision.tag == "GravityItem")
         {
             Debug.Log("New object hit by grav gun");

@@ -12,14 +12,7 @@ public class SwitchRev : MonoBehaviour
             Debug.Log("SWITCH");
             switchObj.SetActive(true);
         }
-        //else
-        //{
-        //    switchObj.SetActive(false);
-        //}
-        //if (collision.tag == "Player")
-        //{
-        //    switchObj.SetActive(true);
-        //}
+       
     }
         private void OnTriggerExit2D(Collider2D collision)
         {

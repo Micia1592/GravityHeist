@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This is attached to every objectthat can be controlled by gravity
+
 public class GravityObject : MonoBehaviour
 {
     private Rigidbody2D rgb2d;

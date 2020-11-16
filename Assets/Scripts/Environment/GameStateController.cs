@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+//This scriptcontrols each levels gravity
 
 public class GameStateController : MonoBehaviour
 {

@@ -8,7 +8,7 @@ public class CollisionAudio : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            source.Play();
+            source.Play(); //When the player collides wth this, play some sound
    
         
     }

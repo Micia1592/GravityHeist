@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Quit the game on button press, only works when game is built
+
 public class Exit : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void ExitGame()
     {
         Application.Quit();

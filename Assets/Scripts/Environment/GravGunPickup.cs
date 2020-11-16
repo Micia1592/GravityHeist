@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//When the player gets the gravity gun
+
 public class GravGunPickup : MonoBehaviour
 {
     private GameStateController controller;
@@ -21,7 +23,7 @@ public class GravGunPickup : MonoBehaviour
             smash.Play();
             controller.EquipGravGun(true);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            Destroy(gameObject, 1.3f);
+            Destroy(gameObject, 1.3f);//Wait for audio to play before destroy
         }
     }
 }
