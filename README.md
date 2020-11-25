@@ -6,4 +6,4 @@ If playing from the Unity files, launch the MusicManager scene first to play wit
 
 This is a 2D platforming game with gravity controls created as part of a module. 
 
-*Oliver Withington, Michael Saiger and Louise Bryce
+*Oliver Withington, Michael Saiger and Louise Bryce*
