@@ -532,6 +532,7 @@ MonoBehaviour:
   level6Music: {fileID: 1047433288}
   level11Music: {fileID: 1047433287}
   finalMusic: {fileID: 1047433292}
+  onMainMenu: 0
   onLevel6: 0
   onLevel11: 0
   onFinalLevels: 0

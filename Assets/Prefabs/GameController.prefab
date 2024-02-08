@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityInverted: 0
+  timecontroller: {fileID: 145307312902098912, guid: 3d8b4c3291fe1e6449cd0f4038fa9f66,
+    type: 3}
+  IsGravGunEquiped: 0

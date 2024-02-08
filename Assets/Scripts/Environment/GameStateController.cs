@@ -8,6 +8,7 @@ public class GameStateController : MonoBehaviour
     //Event for global gravity changing
     public static event Action<bool> OnGravityChange;
     public bool gravityInverted = false;
+    public Timer timecontroller;
 
     //Setting for each level on whether the grav gun is equiped 
     public bool IsGravGunEquiped;
@@ -16,7 +17,15 @@ public class GameStateController : MonoBehaviour
     private GameObject gravgun;
 
     //public  debrisLayer;
-
+    void Start()
+    {
+        //check if the timercontroller is set - remove from prod builds
+        if (timecontroller != null)
+        {
+            //start the timer
+            timecontroller.StartTimer();
+        }
+    }
     private void Awake() {
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
