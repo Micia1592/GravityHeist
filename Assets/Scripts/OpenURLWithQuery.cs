@@ -5,12 +5,21 @@ using UnityEngine;
 public class OpenURLWithQuery : MonoBehaviour
 {
     public string websiteURL = "https://oxfordeducation.eu.qualtrics.com/jfe/form/SV_5gUuE3gt6WWQrK6";
-    public string queryString = "ID=${e://Field/PROLIFIC_PID}&?RID=${e://Field/ResponseID}";
+    //public string queryString = "ID=${e://Field/PROLIFIC_PID}&?RID=${e://Field/ResponseID}";
     
+    void Start()
+    {
+        string originaQueryString = PlayerPrefs.GetString("originalQueryString");
+
+        websiteURL += originaQueryString;
+    }
+
     public void OpenUrl()
     {
-        string urlWithQueryString = websiteURL + queryString;
+        //string urlWithQueryString = websiteURL + queryString;
 
-        Application.OpenURL(urlWithQueryString);
+        //Application.OpenURL(urlWithQueryString);
+
+        Application.OpenURL(websiteURL);
     }
 }

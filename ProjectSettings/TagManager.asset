@@ -12,6 +12,7 @@ TagManager:
   - Spinnable
   - Wheel
   - GravGun
+  - Pause
   layers:
   - Default
   - TransparentFX

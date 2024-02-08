@@ -1857,7 +1857,7 @@ GameObject:
   - component: {fileID: 4443344282852878585}
   m_Layer: 5
   m_Name: PauseCanvas
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 2915487110964255356}
   m_Layer: 5
   m_Name: OptionCanvas
-  m_TagString: Untagged
+  m_TagString: Pause
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

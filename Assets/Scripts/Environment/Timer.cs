@@ -15,7 +15,9 @@ public class Timer : MonoBehaviour
     public Text timerText;
 
     public GameObject player;
-    
+
+    public GameObject pauseMenu;
+
     private void Awake()
     {
         if (instance == null)
@@ -44,6 +46,8 @@ public class Timer : MonoBehaviour
         {
             Debug.LogError("player gameobject cannot be found in the scene");
         }
+
+        pauseMenu = GameObject.FindGameObjectWithTag("Pause");
     }
 
     void Start()
@@ -85,10 +89,16 @@ public class Timer : MonoBehaviour
     {
         isTimerRunning = false;
         canvasToToggle.SetActive(true);
+  
 
         if (player != null)
         {
             player.SetActive(false);
         }
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
     }
 }
