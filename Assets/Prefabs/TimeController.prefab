@@ -687,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalTime: 600
+  totalTime: 60
   canvasToToggle: {fileID: 3332940026570340192}
   timerText: {fileID: 8582120019502418119}
   player: {fileID: 0}
@@ -703,4 +704,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89411eebadbacd4888ef855b4a8961e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  websiteURL: https://oxfordeducation.eu.qualtrics.com/jfe/form/SV_5gUuE3gt6WWQrK6
+  websiteURL: https://oxfordeducation.eu.qualtrics.com/jfe/form/SV_40kiDL8FsSZ3k6q
