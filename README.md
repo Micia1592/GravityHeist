@@ -1,5 +1,4 @@
-# Game Development Module at QMUL
-
+# Gravity Heist Control Version
 *Play Gravity Heist:* https://mikethingsbetter.itch.io/gravity-heist
 
 If playing from the Unity files, launch the MusicManager scene first to play with all features. Built in editor version 2019.4.13f. 
